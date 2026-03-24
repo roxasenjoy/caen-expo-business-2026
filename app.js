@@ -1,6 +1,30 @@
         // ===== CONFIGURATION DATA =====
         const FORMATIONS = [
             {
+                id: 'jb',
+                trainer: 'JB',
+                initials: 'JB',
+                avatarColor: '#152f7b',
+                photo: 'photos/jb.png',
+                tag: 'Initiation',
+                title: 'Découvrir l\'Intelligence artificielle et s\'initier à l\'IA Générative',
+                resume: 'Découvrez une formation pratique pour maîtriser l\'IA générative, ses usages professionnels et booster performance, innovation et compétitivité',
+                objectifs: [
+                    'Définir les principes de base de l\'Intelligence artificielle',
+                    'Maîtriser les fondamentaux du prompt engineering',
+                    'Appréhender et tester les applications et outils d\'IA Générative'
+                ],
+                bio: '',
+                sessions: [
+                    { id: 'jb_s1', label: '4 juin 2026', date: '2026-06-04', lieu: 'Douvres', salle: 'NK Vision' },
+                    { id: 'jb_s2', label: '6 octobre 2026', date: '2026-10-06', lieu: 'Douvres', salle: 'NK Vision' }
+                ],
+                tarifSalon: '350 €',
+                tarifNormal: '400 €',
+                tarif: '',
+                lien: 'https://www.idlabs.fr/fr/formations/ia-generative/decouvrir-l-intelligence-artificielle-et-s-initier-a-l-ia-generative'
+            },
+            {
                 id: 'timothee',
                 trainer: 'Timothée',
                 initials: 'T',
@@ -17,8 +41,8 @@
                 ],
                 bio: '',
                 sessions: [
-                    { id: 'timothee_s1', label: '9 juin 2026', date: '2026-06-09' },
-                    { id: 'timothee_s2', label: '10 septembre 2026', date: '2026-09-10' }
+                    { id: 'timothee_s1', label: '9 juin 2026', date: '2026-06-09', lieu: 'Douvres', salle: 'NK Vision' },
+                    { id: 'timothee_s2', label: '10 septembre 2026', date: '2026-09-10', lieu: 'Douvres', salle: 'NK Vision' }
                 ],
                 tarifSalon: '350 €',
                 tarifNormal: '400 €',
@@ -42,8 +66,8 @@
                 ],
                 bio: '',
                 sessions: [
-                    { id: 'stephanie_s1', label: '25-26 juin 2026', date: '2026-06-25' },
-                    { id: 'stephanie_s2', label: '21-22 septembre 2026', date: '2026-09-21' }
+                    { id: 'stephanie_s1', label: '25-26 juin 2026', date: '2026-06-25', lieu: 'Douvres', salle: 'NK Vision' },
+                    { id: 'stephanie_s2', label: '21-22 septembre 2026', date: '2026-09-21', lieu: 'Douvres', salle: 'NK Vision' }
                 ],
                 tarifSalon: '375 €',
                 tarifNormal: '455 €',
@@ -66,8 +90,8 @@
                 ],
                 bio: 'Je suis Cécile, copywriter. Ce que je débloque chez un dirigeant, c\'est la capacité à rendre son savoir-faire désirable et évident : son message cesse d\'être purement informatif pour devenir magnétique.',
                 sessions: [
-                    { id: 'cecile_s1', label: '11 juin 2026', date: '2026-06-11' },
-                    { id: 'cecile_s2', label: '17 septembre 2026', date: '2026-09-17' }
+                    { id: 'cecile_s1', label: '11 juin 2026', date: '2026-06-11', lieu: 'Caen', salle: 'Bananerie' },
+                    { id: 'cecile_s2', label: '17 septembre 2026', date: '2026-09-17', lieu: 'Caen', salle: 'Bananerie' }
                 ],
                 tarifSalon: '350 €',
                 tarifNormal: '400 €',
@@ -90,37 +114,13 @@
                 ],
                 bio: 'Je suis Cédric, développeur et formateur. Ce que je débloque chez un dirigeant, c\'est la maîtrise de ses outils numériques : je construis des solutions solides, intégrant développement, automatisation, IA et No-Code.',
                 sessions: [
-                    { id: 'cedric_s1', label: '16 juin 2026', date: '2026-06-16' },
-                    { id: 'cedric_s2', label: '1er octobre 2026', date: '2026-10-01' }
+                    { id: 'cedric_s1', label: '16 juin 2026', date: '2026-06-16', lieu: 'Colombelles', salle: 'Forum Digital' },
+                    { id: 'cedric_s2', label: '1er octobre 2026', date: '2026-10-01', lieu: 'Colombelles', salle: 'Forum Digital' }
                 ],
                 tarifSalon: '380 €',
                 tarifNormal: '450 €',
                 tarif: '',
                 lien: 'https://www.idlabs.fr/fr/formations/digital-en-entreprise/automatisez-vos-taches-avec-make-et-l-ia'
-            },
-            {
-                id: 'jb',
-                trainer: 'JB',
-                initials: 'JB',
-                avatarColor: '#152f7b',
-                photo: 'photos/jb.png',
-                tag: 'Initiation',
-                title: 'Découvrir l\'Intelligence artificielle et s\'initier à l\'IA Générative',
-                resume: 'Découvrez une formation pratique pour maîtriser l\'IA générative, ses usages professionnels et booster performance, innovation et compétitivité',
-                objectifs: [
-                    'Définir les principes de base de l\'Intelligence artificielle',
-                    'Maîtriser les fondamentaux du prompt engineering',
-                    'Appréhender et tester les applications et outils d\'IA Générative'
-                ],
-                bio: '',
-                sessions: [
-                    { id: 'jb_s1', label: '4 juin 2026', date: '2026-06-04' },
-                    { id: 'jb_s2', label: '6 octobre 2026', date: '2026-10-06' }
-                ],
-                tarifSalon: '350 €',
-                tarifNormal: '400 €',
-                tarif: '',
-                lien: 'https://www.idlabs.fr/fr/formations/ia-generative/decouvrir-l-intelligence-artificielle-et-s-initier-a-l-ia-generative'
             }
         ];
 
@@ -515,12 +515,12 @@
 
         function buildSessionRow(session, avatarColor) {
             const count = getSessionRegs(session.id);
-            const isFull = count >= 8;
-            const remaining = 8 - count;
+            const isFull = count >= 10;
+            const remaining = 10 - count;
             const few = remaining <= 3 && remaining > 0;
 
             let dotsHtml = '';
-            for (let i = 0; i < 8; i++) {
+            for (let i = 0; i < 10; i++) {
                 const taken = i < count;
                 const warnClass = (isFull || few) && taken ? ' warn' : '';
                 dotsHtml += `<span class="dot${taken ? ' taken' + warnClass : ''}"></span>`;
@@ -528,7 +528,7 @@
 
             let statusText = '';
             let statusClass = '';
-            const waitlist = count - 8;
+            const waitlist = count - 10;
             if (isFull) {
                 statusText = waitlist > 0
                     ? `Complet — ${waitlist} en liste d'attente`
@@ -542,12 +542,20 @@
                 statusClass = '';
             }
 
+            const lieuHtml = (session.lieu || session.salle)
+                ? `<div class="session-lieu">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>${[session.lieu, session.salle].filter(Boolean).join(' — ')}</span>
+                   </div>`
+                : '';
+
             return `
                 <div class="session-row">
                     <div class="session-date">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
                         <span>${session.label}</span>
                     </div>
+                    ${lieuHtml}
                     <div class="session-seats">
                         <div class="formation-seats-dots">${dotsHtml}</div>
                         <span class="formation-seats-text ${statusClass}">${statusText}</span>
@@ -637,15 +645,15 @@
 
             const regs = loadData('formations_registrations', {});
             const count = (regs[sessionId] || []).length;
-            const isFull = count >= 8;
+            const isFull = count >= 10;
 
             // Info chips
-            const remaining = 8 - count;
+            const remaining = 10 - count;
             let priceChip = '';
             if (formation.tarifSalon && formation.tarifNormal) {
-                priceChip = `<div class="modal-info-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><strong style="color:var(--primary)">${formation.tarifSalon}</strong>&nbsp;<span style="color:#bbb;text-decoration:line-through">${formation.tarifNormal}</span></div>`;
+                priceChip = `<div class="modal-info-chip"><strong style="color:var(--primary)">${formation.tarifSalon}</strong>&nbsp;<span style="color:#bbb;text-decoration:line-through">${formation.tarifNormal}</span></div>`;
             } else if (formation.tarif) {
-                priceChip = `<div class="modal-info-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>${formation.tarif}</div>`;
+                priceChip = `<div class="modal-info-chip">${formation.tarif}</div>`;
             }
 
             const statusChip = isFull
@@ -661,6 +669,7 @@
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
                             ${session.label}
                         </div>
+                        ${(session.lieu || session.salle) ? `<div class="modal-info-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>${[session.lieu, session.salle].filter(Boolean).join(' — ')}</div>` : ''}
                         ${priceChip}
                         ${statusChip}
                     </div>
@@ -1347,7 +1356,7 @@
                         return `
                             <div class="formation-stat" style="margin-left: 16px;">
                                 <div class="formation-stat-name" style="font-size: 13px; color: #666;">${s.label}</div>
-                                <div class="formation-stat-count">${count} / 8</div>
+                                <div class="formation-stat-count">${count} / 10</div>
                             </div>
                         `;
                     }).join('');
