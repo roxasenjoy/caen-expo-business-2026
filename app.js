@@ -47,7 +47,7 @@
                 tarifSalon: '350 €',
                 tarifNormal: '400 €',
                 tarif: '',
-                lien: ''
+                lien: 'https://www.idlabs.fr/fr/experts/timothee-laisne'
             },
             {
                 id: 'stephanie',
@@ -130,12 +130,12 @@
                 name: 'Vision & Stratégie',
                 icon: '🧭',
                 color: '#2292cb',
-                desc: 'Alignement stratégique et leadership IA',
+                desc: 'Évaluation de votre posture stratégique',
                 questions: [
-                    'Votre direction générale a-t-elle formalisé une stratégie ou une feuille de route IA ?',
-                    'Des budgets dédiés à l\'IA ont-ils été alloués pour l\'exercice en cours ?',
-                    'Disposez-vous d\'un responsable identifié (CDO, Chief AI Officer…) pour piloter l\'IA ?',
-                    'L\'IA fait-elle partie des objectifs stratégiques communiqués en interne et/ou en externe ?'
+                    'Votre direction a-t-elle formalisé une feuille de route IA avec des jalons clairs ?',
+                    'Un budget dédié aux initiatives IA a-t-il été alloué dans votre structure ?',
+                    'Un responsable est-il officiellement désigné pour piloter votre transformation IA ?',
+                    'L\'intelligence artificielle est-elle inscrite dans vos objectifs stratégiques officiels ?'
                 ]
             },
             {
@@ -143,12 +143,12 @@
                 name: 'Données & Infrastructure',
                 icon: '🗄️',
                 color: '#152f7b',
-                desc: 'Qualité, accessibilité et gouvernance des données',
+                desc: 'Audit de vos fondations data',
                 questions: [
-                    'Vos données métiers sont-elles structurées, centralisées et accessibles (data warehouse, data lake) ?',
-                    'Disposez-vous d\'une politique de gouvernance et de qualité des données ?',
-                    'Vos systèmes sont-ils interconnectés via des API ou une architecture data moderne ?',
-                    'Utilisez-vous des outils de BI ou d\'analytics avancés (Power BI, Tableau, Snowflake…) ?'
+                    'Vos données métiers sont-elles centralisées et accessibles facilement à vos équipes ?',
+                    'Une politique de gouvernance des données est-elle active et respectée dans votre organisation ?',
+                    'Les outils numériques en place permettent d\'envisager une intégration progressive de solutions IA ?',
+                    'L\'entreprise dispose d\'outils d\'analyse, de reporting ou de business intelligence déjà utilisés par les équipes.'
                 ]
             },
             {
@@ -156,13 +156,13 @@
                 name: 'Usages & Outils IA',
                 icon: '🛠️',
                 color: '#e8922a',
-                desc: 'Adoption opérationnelle de l\'IA dans les métiers',
+                desc: 'Analyse de vos opérations terrain',
                 questions: [
-                    'Des outils IA (copilotes, LLM, automatisation) sont-ils utilisés au quotidien dans vos équipes ?',
-                    'Avez-vous des cas d\'usage IA en production (pas seulement en expérimentation) ?',
-                    'L\'IA est-elle utilisée dans votre relation client (chatbot, recommandation, personnalisation) ?',
-                    'Utilisez-vous l\'IA pour automatiser des processus internes (RPA, traitement de documents…) ?',
-                    'Mesurez-vous le ROI ou l\'impact business des initiatives IA déployées ?'
+                    'Des outils IA sont-ils activement utilisés au quotidien par vos équipes ?',
+                    'Savez-vous précisément quels outils d\'IA générative sont actuellement utilisés par vos collaborateurs ?',
+                    'Avez-vous identifié plusieurs cas d\'usage IA à fort potentiel pour votre activité ?',
+                    'L\'IA automatise-t-elle des processus internes dans votre organisation ?',
+                    'Mesurez-vous le retour sur investissement de vos projets IA ?'
                 ]
             },
             {
@@ -170,12 +170,12 @@
                 name: 'Compétences & Culture',
                 icon: '🧠',
                 color: '#2eb87a',
-                desc: 'Capital humain et culture d\'innovation',
+                desc: 'Évaluation du capital humain IA',
                 questions: [
-                    'Vos équipes ont-elles reçu des formations spécifiques à l\'IA ou au prompt engineering ?',
-                    'Disposez-vous de profils techniques IA en interne (data scientist, ML engineer…) ?',
-                    'Existe-t-il une communauté interne ou un réseau d\'ambassadeurs IA dans votre organisation ?',
-                    'La direction encourage-t-elle activement les expérimentations et le droit à l\'erreur autour de l\'IA ?'
+                    'Vos collaborateurs ont-ils bénéficié de formations IA ou de prompt engineering ?',
+                    'Des profils techniques spécialisés en IA existent-ils au sein de votre structure ?',
+                    'Des ambassadeurs IA relaient-ils activement les bonnes pratiques dans vos équipes ?',
+                    'Votre direction encourage-t-elle et finance-t-elle l\'expérimentation IA au quotidien ?'
                 ]
             },
             {
@@ -183,12 +183,12 @@
                 name: 'Processus & Gouvernance',
                 icon: '⚙️',
                 color: '#8b5cf6',
-                desc: 'Cadre éthique, sécurité et conformité IA',
+                desc: 'Audit des protocoles et conformité',
                 questions: [
-                    'Avez-vous une politique de sécurité et de confidentialité pour les outils IA (RGPD, données sensibles) ?',
-                    'Disposez-vous d\'une charte ou d\'un cadre éthique encadrant l\'usage de l\'IA ?',
-                    'Les risques liés à l\'IA (biais, hallucinations, dépendance fournisseur) sont-ils identifiés et gérés ?',
-                    'Vos processus d\'achat ou de validation de solutions IA sont-ils formalisés ?'
+                    'Une politique de sécurité encadre-t-elle formellement l\'usage de vos outils IA ?',
+                    'Votre organisation dispose-t-elle d\'une charte éthique régissant l\'usage de l\'IA ?',
+                    'Les risques IA — biais algorithmiques, hallucinations — sont-ils identifiés et contrôlés ?',
+                    'L\'acquisition de nouvelles solutions IA suit-elle un processus de validation formalisé ?'
                 ]
             },
             {
@@ -196,12 +196,12 @@
                 name: 'Potentiel & Ambition',
                 icon: '🚀',
                 color: '#e03d3d',
-                desc: 'Capacité à accélérer l\'adoption IA',
+                desc: 'Évaluation de votre capacité à accélérer',
                 questions: [
-                    'Avez-vous identifié des cas d\'usage IA prioritaires à fort impact pour les 12 prochains mois ?',
-                    'Êtes-vous en relation avec des partenaires, startups ou consultants spécialisés en IA ?',
-                    'Votre organisation est-elle prête à faire évoluer ses processus et organisations autour de l\'IA ?',
-                    'Votre direction est-elle prête à investir significativement dans l\'IA dans les 2 prochaines années ?'
+                    'Vos priorités IA pour les 12 prochains mois sont-elles clairement définies et partagées ?',
+                    'Collaborez-vous avec des partenaires ou experts spécialisés en intelligence artificielle ?',
+                    'Votre organisation est-elle structurellement prête à se transformer autour de l\'IA ?',
+                    'Votre direction est-elle disposée à investir de façon significative dans l\'IA cette année ?'
                 ]
             }
         ];
@@ -249,32 +249,188 @@
             }
         ];
 
+        // Recommendations par score : low < 40 / mid 40-69 / high ≥ 70
+        // Distribution cible : JB ×4 · Timothée ×3 · Stéphanie ×3 · Cécile ×3 · Cédric ×5
         const RECOMMENDATIONS = {
             strategie: [
-                { tag: 'Quick Win', text: 'Organisez un atelier de co-construction de votre feuille de route IA avec la direction et les managers clés.' },
-                { tag: 'Moyen terme', text: 'Nommez un référent IA transverse chargé de coordonner les initiatives et de piloter la transformation.' }
+                {
+                    maxScore: 39, tag: 'Fondation stratégique',
+                    text: 'Votre direction n\'a pas encore formalisé de feuille de route IA. Avant de construire une vision, commencez par des victoires rapides et concrètes : la productivité IA au quotidien — réunions, rédaction, organisation — est souvent le déclic qui convainc la direction d\'investir et d\'inscrire l\'IA dans ses objectifs officiels.',
+                    trainer: 'timothee'
+                },
+                {
+                    maxScore: 69, tag: 'Structuration de la vision',
+                    text: 'Des initiatives IA existent mais manquent de coordination et de cap commun. Pour structurer la démarche, il faut d\'abord maîtriser les fondamentaux : comprendre les différents types d\'IA, distinguer ce qui est réaliste de ce qui ne l\'est pas, et identifier les cas d\'usage à fort ROI pour votre secteur spécifique.',
+                    trainer: 'jb'
+                },
+                {
+                    maxScore: 100, tag: 'Pilotage par la donnée',
+                    text: 'Votre posture stratégique est solide. Pour l\'exécuter avec précision, automatisez vos tableaux de bord IA : KPIs d\'adoption, ROI par cas d\'usage, gains de productivité. Avec Make, connectez vos outils de pilotage pour rendre votre feuille de route opérationnelle en temps réel.',
+                    trainer: 'cedric'
+                }
             ],
             donnees: [
-                { tag: 'Fondation', text: 'Auditez vos sources de données existantes et identifiez les silos à connecter en priorité.' },
-                { tag: 'Infrastructure', text: 'Investissez dans une plateforme data centralisée (cloud data warehouse) comme socle indispensable à tout projet IA.' }
+                {
+                    maxScore: 39, tag: 'Fondation data',
+                    text: 'Vos données sont cloisonnées dans des silos non connectés. Avant tout projet IA, il faut comprendre pourquoi les données sont le carburant indispensable de l\'IA et quelles actions simples permettent de commencer à les valoriser. Identifier les bons cas d\'usage data est la première étape avant toute décision technique.',
+                    trainer: 'jb'
+                },
+                {
+                    maxScore: 69, tag: 'Connexion des flux',
+                    text: 'Vos données existent mais restent partiellement fragmentées. L\'enjeu est de créer des pipelines automatisés entre vos outils (CRM, Drive, Notion, Airtable…) pour alimenter vos projets IA en temps réel. Des solutions no-code comme Make permettent de connecter ces flux sans développement et en quelques jours.',
+                    trainer: 'cedric'
+                },
+                {
+                    maxScore: 100, tag: 'Valorisation avancée',
+                    text: 'Vos fondations data sont solides. Exploitez-les pleinement en construisant des workflows d\'enrichissement automatique, des tableaux de bord temps réel et en activant des cas d\'usage IA avancés (RAG sur vos données internes, scoring, prédiction) directement sur votre patrimoine data propriétaire.',
+                    trainer: 'cedric'
+                }
             ],
             usages: [
-                { tag: 'Expérimentation', text: 'Lancez 2–3 projets pilotes IA sur des processus à fort volume et faible risque pour créer des quick wins visibles.' },
-                { tag: 'ROI', text: 'Définissez des KPIs clairs pour chaque initiative IA et mettez en place un tableau de bord de suivi.' }
+                {
+                    maxScore: 39, tag: 'Découverte des outils IA',
+                    text: 'L\'IA est quasi absente de vos opérations quotidiennes. Des gains immédiats sont pourtant accessibles sans compétences techniques : rédaction, synthèse de réunions, création de contenus, réponses aux emails. Une formation pratique permet de comprendre les outils réellement utiles et d\'identifier vos premiers cas d\'usage à fort impact.',
+                    trainer: 'jb'
+                },
+                {
+                    maxScore: 69, tag: 'Diversification des usages',
+                    text: 'Des outils IA sont utilisés mais les usages restent souvent cantonnés au texte. Élargissez le champ en intégrant la création visuelle IA dans vos processus : vos équipes peuvent produire des visuels professionnels pour leurs présentations, réseaux sociaux et supports commerciaux — sans graphiste ni compétence technique préalable.',
+                    trainer: 'stephanie'
+                },
+                {
+                    maxScore: 100, tag: 'Communication augmentée',
+                    text: 'Vos usages IA sont opérationnels. Pour créer un avantage compétitif durable, développez une stratégie de communication augmentée : construisez une voix de marque cohérente et authentique, produisez des contenus à haute valeur ajoutée à grande échelle et positionnez l\'IA comme levier éditorial stratégique pour votre organisation.',
+                    trainer: 'cecile'
+                }
             ],
             competences: [
-                { tag: 'Formation', text: 'Déployez un programme de sensibilisation et de formation à l\'IA pour l\'ensemble des collaborateurs — ID Labs propose des parcours adaptés.' },
-                { tag: 'Talent', text: 'Identifiez et formez des \'AI Champions\' dans chaque département pour diffuser les bonnes pratiques au quotidien.' }
+                {
+                    maxScore: 39, tag: 'Sensibilisation collective',
+                    text: 'La quasi-totalité de vos collaborateurs n\'a reçu aucune formation IA. Ce déficit crée un écart croissant avec vos concurrents et freine l\'adoption de tout outil. Démarrez par une session d\'initiation pour démystifier l\'IA générative, comprendre ses possibilités réelles et enclencher la dynamique collective de montée en compétences.',
+                    trainer: 'jb'
+                },
+                {
+                    maxScore: 69, tag: 'Productivité opérationnelle',
+                    text: 'Quelques collaborateurs utilisent l\'IA mais sans méthode ni cadre partagé. Pour généraliser les bonnes pratiques, formez vos équipes à l\'IA appliquée à leurs tâches quotidiennes : gestion de réunions, rédaction, reporting, communication interne. Des résultats mesurables et visibles dès la première semaine.',
+                    trainer: 'timothee'
+                },
+                {
+                    maxScore: 100, tag: 'Excellence éditoriale',
+                    text: 'Vos équipes maîtrisent les bases. Pour creuser l\'avantage, développez la capacité à communiquer avec l\'IA de façon authentique et stratégique : construire une voix de marque unique, produire des contenus qui convertissent et utiliser l\'IA comme amplificateur de talent plutôt que simple outil de gain de temps.',
+                    trainer: 'cecile'
+                }
             ],
             gouvernance: [
-                { tag: 'Conformité', text: 'Rédigez une charte IA interne définissant les règles d\'usage, les données interdites et les bonnes pratiques RGPD.' },
-                { tag: 'Sécurité', text: 'Effectuez une analyse de risques IA et mettez en place un processus de validation formelle des nouveaux outils.' }
+                {
+                    maxScore: 39, tag: 'Cadre d\'usage urgent',
+                    text: 'Vos collaborateurs utilisent probablement des outils IA sans règles ni garde-fous. Ce flou expose votre organisation à des fuites de données et violations RGPD. La formation à l\'usage éthique et responsable de l\'IA est le premier rempart : comprendre les risques réels, adopter les bons réflexes et établir une charte d\'usage simple et applicable.',
+                    trainer: 'timothee'
+                },
+                {
+                    maxScore: 69, tag: 'Propriété intellectuelle IA',
+                    text: 'Des règles existent mais elles ne couvrent pas tous les usages, notamment les visuels générés par IA. Les droits d\'auteur, la propriété intellectuelle et les conditions d\'usage des images IA sont des angles morts fréquents de la gouvernance. Former vos équipes à ces enjeux est indispensable pour éviter toute exposition légale.',
+                    trainer: 'stephanie'
+                },
+                {
+                    maxScore: 100, tag: 'Gouvernance automatisée',
+                    text: 'Votre gouvernance IA est robuste. Pour l\'industrialiser, automatisez vos processus de conformité : journaux d\'audit des usages, alertes sur les comportements à risque, tableaux de bord de suivi des incidents. Avec Make, la gouvernance devient elle-même un workflow automatisé à fort impact.',
+                    trainer: 'cedric'
+                }
             ],
             potentiel: [
-                { tag: 'Opportunité', text: 'Organisez un hackathon interne pour identifier vos 5 cas d\'usage IA prioritaires à fort impact business.' },
-                { tag: 'Partenariat', text: 'Engagez-vous avec des partenaires IA spécialisés pour accélérer votre montée en compétences — contactez ID Labs !' }
+                {
+                    maxScore: 39, tag: 'Déclic IA',
+                    text: 'Votre organisation n\'a pas encore activé son potentiel IA. Souvent, le déclic vient de la communication : comprendre comment l\'IA peut amplifier votre voix, valoriser votre expertise et vous différencier dans votre secteur. Une vision claire de la communication IA suffit à déclencher toute la dynamique d\'innovation.',
+                    trainer: 'cecile'
+                },
+                {
+                    maxScore: 69, tag: 'Accélération visuelle',
+                    text: 'L\'ambition IA est présente mais les leviers d\'accélération restent à activer. La création de contenu visuel augmenté par l\'IA est l\'un des plus rapides à déployer : en quelques jours, vos équipes produisent des visuels professionnels pour vos supports commerciaux, réseaux sociaux et formations — un accélérateur immédiat et visible.',
+                    trainer: 'stephanie'
+                },
+                {
+                    maxScore: 100, tag: 'Leadership sectoriel',
+                    text: 'Votre organisation est prête à prendre une position de leader IA dans votre secteur. Structurez un programme d\'innovation continue : agents IA sur mesure, workflows Make entièrement automatisés et architecture d\'outils interconnectés. Objectif : des processus différenciants qui tournent de façon semi-autonome.',
+                    trainer: 'cedric'
+                }
             ]
         };
+
+        function buildPersonalAnalysis(dimensionScores, finalScore, leadData) {
+            const catInsights = {
+                strategie: {
+                    low: 'la vision stratégique IA reste à formaliser',
+                    mid: 'la stratégie IA est en cours de structuration',
+                    high: 'la direction est alignée sur les enjeux IA'
+                },
+                donnees: {
+                    low: 'les données sont insuffisamment structurées pour l\'IA',
+                    mid: 'l\'infrastructure data est en développement',
+                    high: 'les fondations data sont solides et exploitables'
+                },
+                usages: {
+                    low: 'les usages IA concrets sont encore très limités',
+                    mid: 'les usages IA émergent mais restent épars',
+                    high: 'l\'IA est déjà opérationnelle dans vos processus'
+                },
+                competences: {
+                    low: 'la culture IA n\'est pas encore ancrée dans les équipes',
+                    mid: 'les compétences IA se développent progressivement',
+                    high: 'les équipes sont compétentes et engagées sur l\'IA'
+                },
+                gouvernance: {
+                    low: 'la gouvernance IA est absente ou informelle',
+                    mid: 'le cadre de gouvernance est en cours de formalisation',
+                    high: 'le dispositif de gouvernance IA est maîtrisé'
+                },
+                potentiel: {
+                    low: 'le potentiel d\'accélération n\'est pas encore activé',
+                    mid: 'l\'ambition IA est présente mais reste à mobiliser',
+                    high: 'l\'organisation est prête à accélérer fortement'
+                }
+            };
+
+            const tier = s => s < 40 ? 'low' : s < 70 ? 'mid' : 'high';
+
+            const sorted = QUIZ_CATEGORIES
+                .map(cat => ({ cat, score: dimensionScores[cat.id] || 0 }))
+                .sort((a, b) => b.score - a.score);
+
+            const strengths = sorted.filter(d => d.score >= 60).slice(0, 2);
+            const gaps = sorted.filter(d => d.score < 60).slice(-2).reverse();
+
+            let analysis = '';
+
+            const strengthNames = strengths.map(d => `<strong>${d.cat.name}</strong>`).join(' et ');
+            const gapNames = gaps.map(d => `<strong>${d.cat.name}</strong>`).join(' et ');
+            const strengthInsights = strengths.map(d => catInsights[d.cat.id][tier(d.score)]).join(' et ');
+            const gapInsights = gaps.map(d => catInsights[d.cat.id][tier(d.score)]).join(', ');
+
+            // Intro personnalisée selon score global
+            if (finalScore < 30) {
+                analysis += `<strong>${leadData.prenom}</strong>, votre organisation en est aux prémices de sa transformation IA. Les bases sont encore à poser sur l'ensemble des dimensions — c'est précisément le bon moment pour structurer une démarche cohérente et éviter les erreurs coûteuses.`;
+            } else if (finalScore < 55) {
+                analysis += `<strong>${leadData.prenom}</strong>, votre organisation a initié sa transition IA mais la démarche reste fragmentée. Des avancées réelles existent sur certains axes, mais des lacunes structurelles freinent encore le passage à l'échelle.`;
+            } else if (finalScore < 75) {
+                analysis += `<strong>${leadData.prenom}</strong>, votre maturité IA est en bonne progression. Des usages sont en production et la dynamique est engagée — l'enjeu est désormais de structurer pour industrialiser et maximiser l'impact.`;
+            } else {
+                analysis += `<strong>${leadData.prenom}</strong>, votre organisation affiche une maturité IA avancée, avec une démarche structurée, des équipes compétentes et des usages à impact réel.`;
+            }
+
+            // Points forts
+            if (strengths.length > 0) {
+                analysis += ` Vos points forts se situent en ${strengthNames} — ${strengthInsights}.`;
+            }
+
+            // Axes à améliorer avec CTA formation
+            if (gaps.length > 0) {
+                analysis += ` En revanche, ${gapNames} ${gaps.length > 1 ? 'constituent vos axes' : 'constitue votre axe'} prioritaire${gaps.length > 1 ? 's' : ''} : ${gapInsights}. Les formations ID Labs ci-dessous sont sélectionnées pour répondre précisément à ces besoins.`;
+            } else {
+                analysis += ` Les formations ID Labs ci-dessous vous permettront d'aller encore plus loin sur vos axes d'excellence.`;
+            }
+
+            return analysis;
+        }
 
         // ===== STATE MANAGEMENT =====
         let adminMode = false;
@@ -286,7 +442,8 @@
             currentCategory: 0,
             answers: {},
             xp: 0,
-            totalQuestions: 0
+            totalQuestions: 0,
+            allQuestions: []
         };
 
         // ===== STORAGE (localStorage) =====
@@ -617,6 +774,7 @@
                             <div class="formation-card-body">
                                 <div class="formation-title">${f.title}</div>
                                 <div class="formation-resume">${f.resume}</div>
+                                ${f.lien ? `<a href="${f.lien}" target="_blank" rel="noopener" class="formation-idlabs-link">Voir le programme sur idLabs.fr ↗</a>` : ''}
                             </div>
                             ${priceHtml}
                         </div>
@@ -678,6 +836,13 @@
                         <div class="modal-objectives">
                             ${formation.objectifs.map(obj => `<span class="modal-objective-tag">${obj}</span>`).join('')}
                         </div>
+                    ` : ''}
+
+                    ${formation.lien ? `
+                        <a href="${formation.lien}" target="_blank" rel="noopener" class="modal-idlabs-btn">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            Voir le programme sur idLabs.fr
+                        </a>
                     ` : ''}
 
                     <form id="formationForm">
@@ -762,19 +927,90 @@
 
             quizState.totalQuestions = QUIZ_CATEGORIES.reduce((sum, cat) => sum + cat.questions.length, 0);
 
-            const startBtn = document.getElementById('startQuizBtn');
             const newQuizBtn = document.getElementById('newQuizBtn');
             const downloadBtn = document.getElementById('downloadDiplomaBtn');
 
-            if (startBtn) startBtn.addEventListener('click', startQuiz);
             if (newQuizBtn) newQuizBtn.addEventListener('click', resetQuiz);
             if (downloadBtn) downloadBtn.addEventListener('click', downloadDiploma);
 
-            renderDimensionDots();
+            // Auto-resize inline inputs as user types
+            document.querySelectorAll('.cia-inline-input').forEach(input => {
+                const resize = () => {
+                    const len = Math.max(input.placeholder.length, input.value.length);
+                    input.style.width = (len + 1) + 'ch';
+                };
+                input.addEventListener('input', resize);
+                resize();
+            });
+
+            // Enter key advances CIA onboarding steps
+            const stepFieldMap = {
+                'leadPrenom': 1, 'leadNom': 1,
+                'leadEntreprise': 2, 'leadFonction': 2,
+                'leadEmail': 4
+            };
+            Object.entries(stepFieldMap).forEach(([id, step]) => {
+                const el = document.getElementById(id);
+                if (el) el.addEventListener('keydown', e => {
+                    if (e.key === 'Enter') ciaNext(step);
+                });
+            });
+        }
+
+        // ===== CIA ONBOARDING (step-by-step lead form) =====
+        const CIA_STEPS = [
+            null, // step 0 = accueil (no validation)
+            () => {
+                const prenom = document.getElementById('leadPrenom').value.trim();
+                const nom = document.getElementById('leadNom').value.trim();
+                if (!prenom || !nom) { showToast('Indiquez votre prénom et votre nom.'); return false; }
+                // Personnalise la question suivante
+                const fullName = (prenom.charAt(0).toUpperCase() + prenom.slice(1)) + ' ' + (nom.charAt(0).toUpperCase() + nom.slice(1));
+                const agentSpan = document.getElementById('ciaAgentName');
+                if (agentSpan) agentSpan.textContent = fullName;
+                return true;
+            },
+            () => {
+                const entreprise = document.getElementById('leadEntreprise').value.trim();
+                const fonction = document.getElementById('leadFonction').value.trim();
+                if (!entreprise) { showToast('Indiquez le nom de votre organisation.'); return false; }
+                if (!fonction) { showToast('Indiquez votre fonction.'); return false; }
+                const orgName = entreprise.charAt(0).toUpperCase() + entreprise.slice(1);
+                const orgSpan = document.getElementById('ciaOrgName');
+                if (orgSpan) orgSpan.textContent = orgName;
+                return true;
+            },
+            () => {
+                const secteur = document.getElementById('leadSecteur').value;
+                const taille = document.getElementById('leadTaille').value;
+                if (!secteur) { showToast('Sélectionnez votre secteur d\'activité.'); return false; }
+                if (!taille) { showToast('Sélectionnez la taille de votre équipe.'); return false; }
+                return true;
+            },
+            () => {
+                const email = document.getElementById('leadEmail').value.trim();
+                if (!email || !email.includes('@')) { showToast('Adresse email invalide.'); return false; }
+                return true;
+            }
+        ];
+
+        function ciaNext(currentStep) {
+            const validate = CIA_STEPS[currentStep];
+            if (validate && !validate()) return;
+
+            if (currentStep === 4) {
+                // Last step → launch quiz
+                startQuiz();
+                return;
+            }
+
+            const current = document.getElementById('ciaStep' + currentStep);
+            const next = document.getElementById('ciaStep' + (currentStep + 1));
+            if (current) current.classList.remove('active');
+            if (next) next.classList.add('active');
         }
 
         function startQuiz() {
-            // Validate lead form
             const nom = document.getElementById('leadNom').value.trim();
             const prenom = document.getElementById('leadPrenom').value.trim();
             const email = document.getElementById('leadEmail').value.trim();
@@ -786,178 +1022,130 @@
             }
 
             quizState.leadData = {
-                nom,
-                prenom,
-                email,
-                entreprise,
+                nom, prenom, email, entreprise,
                 secteur: document.getElementById('leadSecteur').value || 'N/A',
                 taille: document.getElementById('leadTaille').value || 'N/A',
                 fonction: document.getElementById('leadFonction').value || 'N/A'
             };
 
-            quizState.currentCategory = 0;
+            quizState.allQuestions = [];
+            QUIZ_CATEGORIES.forEach((cat, catIdx) => {
+                cat.questions.forEach((q, qIdx) => {
+                    quizState.allQuestions.push({ cat, catIdx, q, qIdx });
+                });
+            });
+            quizState.totalQuestions = quizState.allQuestions.length;
+            quizState.currentQuestion = 0;
             quizState.answers = {};
             quizState.xp = 0;
 
             document.getElementById('quizLeadForm').style.display = 'none';
-            document.getElementById('quizProgress').style.display = 'block';
+            document.getElementById('quizArena').style.display = 'flex';
             document.getElementById('resultsPage').style.display = 'none';
+            const quitBtn = document.getElementById('qaQuitBtn');
+            if (quitBtn) quitBtn.style.display = 'flex';
 
-            renderQuizSections();
-            showQuizSection(0);
+            showQuestion(0);
         }
 
-        function renderDimensionDots() {
-            const dotsContainer = document.getElementById('dimensionDots');
-            if (!dotsContainer) return;
+        function showQuestion(idx) {
+            quizState.currentQuestion = idx;
 
-            dotsContainer.innerHTML = QUIZ_CATEGORIES.map((cat, idx) => {
-                return `<div class="dimension-dot" data-dim="${idx}"></div>`;
-            }).join('');
-        }
-
-        function renderQuizSections() {
-            const container = document.getElementById('quizSections');
-            if (!container) return;
-
-            container.innerHTML = QUIZ_CATEGORIES.map((cat, catIdx) => {
-                return `
-                    <div class="quiz-section" data-category="${catIdx}">
-                        <div class="section-header">
-                            <div class="section-icon">${cat.icon}</div>
-                            <div class="section-name">${cat.name}</div>
-                            <div class="section-desc">${cat.desc}</div>
-                        </div>
-
-                        <div id="questions-${catIdx}">
-                            ${cat.questions.map((q, qIdx) => `
-                                <div class="question-block">
-                                    <div class="question-text">
-                                        ${qIdx + 1}. ${q}
-                                    </div>
-                                    <div class="scale-buttons">
-                                        <button type="button" class="scale-btn" data-value="1" data-cat="${catIdx}" data-q="${qIdx}" title="Pas du tout">Pas du<br>tout</button>
-                                        <button type="button" class="scale-btn" data-value="2" data-cat="${catIdx}" data-q="${qIdx}">Plutôt<br>non</button>
-                                        <button type="button" class="scale-btn" data-value="3" data-cat="${catIdx}" data-q="${qIdx}">Neutre</button>
-                                        <button type="button" class="scale-btn" data-value="4" data-cat="${catIdx}" data-q="${qIdx}">Plutôt<br>oui</button>
-                                        <button type="button" class="scale-btn" data-value="5" data-cat="${catIdx}" data-q="${qIdx}" title="Totalement">Totale-<br>ment</button>
-                                    </div>
-                                </div>
-                            `).join('')}
-                        </div>
-
-                        <div class="section-nav">
-                            <button type="button" class="section-btn prev" onclick="previousSection()" ${catIdx === 0 ? 'disabled' : ''}>← Précédent</button>
-                            <button type="button" class="section-btn next" onclick="nextSection()">
-                                ${catIdx === QUIZ_CATEGORIES.length - 1 ? 'Voir les Résultats' : 'Suivant →'}
-                            </button>
-                        </div>
-                    </div>
-                `;
-            }).join('');
-
-            // Attach event listeners to scale buttons
-            document.querySelectorAll('.scale-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const cat = this.dataset.cat;
-                    const q = this.dataset.q;
-                    const value = this.dataset.value;
-
-                    // Deselect other buttons for this question
-                    document.querySelectorAll(`.scale-btn[data-cat="${cat}"][data-q="${q}"]`).forEach(b => {
-                        b.classList.remove('selected');
-                    });
-
-                    // Select this button
-                    this.classList.add('selected');
-
-                    // Store answer
-                    const key = `${cat}-${q}`;
-                    quizState.answers[key] = parseInt(value);
-
-                    updateProgress();
-                });
-            });
-
-            // Restore previous answers
-            for (const key in quizState.answers) {
-                const [cat, q] = key.split('-');
-                const value = quizState.answers[key];
-                const btn = document.querySelector(`.scale-btn[data-cat="${cat}"][data-q="${q}"][data-value="${value}"]`);
-                if (btn) btn.classList.add('selected');
-            }
-        }
-
-        function showQuizSection(idx) {
-            document.querySelectorAll('.quiz-section').forEach((sec, i) => {
-                sec.classList.toggle('active', i === idx);
-            });
-
-            const currentSec = document.getElementById('currentSection');
-            if (currentSec) currentSec.textContent = idx + 1;
-            updateDimensionDots();
-        }
-
-        function nextSection() {
-            const cat = quizState.currentCategory;
-            const cat_q_count = QUIZ_CATEGORIES[cat].questions.length;
-
-            // Check if all questions in this category are answered
-            let allAnswered = true;
-            for (let i = 0; i < cat_q_count; i++) {
-                if (!quizState.answers[`${cat}-${i}`]) {
-                    allAnswered = false;
-                    break;
-                }
-            }
-
-            if (!allAnswered) {
-                showToast('Veuillez répondre à toutes les questions de cette section');
+            if (idx >= quizState.allQuestions.length) {
+                calculateResults();
                 return;
             }
 
-            if (cat < QUIZ_CATEGORIES.length - 1) {
-                quizState.currentCategory++;
-                showQuizSection(quizState.currentCategory);
-            } else {
-                // Quiz complete
-                calculateResults();
-            }
+            _renderQuestion(idx);
         }
 
-        function previousSection() {
-            if (quizState.currentCategory > 0) {
-                quizState.currentCategory--;
-                showQuizSection(quizState.currentCategory);
-            }
-        }
+        function _renderQuestion(idx) {
+            const card = document.getElementById('questionCard');
 
-        function updateProgress() {
-            const answered = Object.keys(quizState.answers).length;
-            const percentage = (answered / quizState.totalQuestions) * 100;
-            const progressFill = document.getElementById('progressFill');
-            if (progressFill) progressFill.style.width = percentage + '%';
+            const _doRender = () => {
+                const { cat, catIdx, q, qIdx } = quizState.allQuestions[idx];
 
-            quizState.xp = Math.floor(answered * 20); // 20 XP per question
-            const xpCounter = document.getElementById('xpCounter');
-            if (xpCounter) xpCounter.textContent = quizState.xp + ' / 500';
-        }
+                // Progress bar
+                const pct = (idx / quizState.allQuestions.length) * 100;
+                const fill = document.getElementById('progressFill');
+                if (fill) fill.style.width = pct + '%';
 
-        function updateDimensionDots() {
-            document.querySelectorAll('.dimension-dot').forEach((dot, idx) => {
-                dot.classList.toggle('active', idx === quizState.currentCategory);
+                // Counter
+                const counter = document.getElementById('questionCounter');
+                if (counter) counter.textContent = 'Q-' + String(idx + 1).padStart(2, '0') + ' / ' + quizState.allQuestions.length;
 
-                // Check if all questions in this category are answered
-                const cat_q_count = QUIZ_CATEGORIES[idx].questions.length;
-                let allAnswered = true;
-                for (let i = 0; i < cat_q_count; i++) {
-                    if (!quizState.answers[`${idx}-${i}`]) {
-                        allAnswered = false;
-                        break;
-                    }
+                // Category chip
+                const icon = document.getElementById('qaCategoryIcon');
+                const name = document.getElementById('qaCategoryName');
+                if (icon) icon.textContent = cat.icon;
+                if (name) name.textContent = cat.name;
+
+                // Category stepper
+                const catsEl = document.getElementById('qaCategoryProgress');
+                if (catsEl) {
+                    catsEl.innerHTML = QUIZ_CATEGORIES.map((c, i) => {
+                        const done = i < catIdx;
+                        const active = i === catIdx;
+                        return `<div class="qa-cat-step${done ? ' done' : ''}${active ? ' active' : ''}" style="--c:${c.color}">
+                            <div class="qa-cat-bubble">${done ? '✓' : c.icon}</div>
+                            <span class="qa-cat-name">${c.name}</span>
+                        </div>`;
+                    }).join('');
                 }
-                dot.classList.toggle('completed', allAnswered);
-            });
+
+                // Card accent color
+                if (card) card.style.setProperty('--cat-color', cat.color);
+
+                // Mission label + question
+                const missionLabel = document.getElementById('qaMissionLabel');
+                if (missionLabel) missionLabel.textContent = cat.desc;
+                const qText = document.getElementById('questionText');
+                if (qText) qText.textContent = q;
+
+                // Answer buttons
+                const key = catIdx + '-' + qIdx;
+                const current = quizState.answers[key];
+                const container = document.getElementById('answerButtons');
+
+                if (container) {
+                    container.innerHTML = [1,2,3,4,5,6].map(v => `
+                        <button class="answer-btn${current === v ? ' selected' : ''}"
+                            data-value="${v}" data-cat="${catIdx}" data-q="${qIdx}"
+                            style="--cat-color: ${cat.color}">
+                            ${v}
+                        </button>
+                    `).join('');
+
+                    container.querySelectorAll('.answer-btn').forEach(btn => {
+                        btn.addEventListener('click', function() {
+                            const val = parseInt(this.dataset.value);
+                            const k = this.dataset.cat + '-' + this.dataset.q;
+                            quizState.answers[k] = val;
+                            container.querySelectorAll('.answer-btn').forEach(b => b.classList.remove('selected'));
+                            this.classList.add('selected');
+                            setTimeout(() => showQuestion(idx + 1), 220);
+                        });
+                    });
+                }
+
+                // Enter animation
+                if (card) {
+                    void card.offsetWidth;
+                    card.classList.add('qa-enter');
+                    setTimeout(() => card.classList.remove('qa-enter'), 350);
+                }
+            };
+
+            // Exit then render
+            if (card && idx > 0) {
+                card.classList.add('qa-exit');
+                setTimeout(() => {
+                    card.classList.remove('qa-exit');
+                    _doRender();
+                }, 200);
+            } else {
+                _doRender();
+            }
         }
 
         function calculateResults() {
@@ -975,17 +1163,25 @@
                     catCount++;
                 });
 
-                const avgScore = catCount > 0 ? (catScore / (catCount * 5)) * 100 : 0;
+                const avgScore = catCount > 0 ? (catScore / (catCount * 6)) * 100 : 0;
                 dimensionScores[cat.id] = Math.round(avgScore);
                 totalScore += avgScore;
             });
 
             const finalScore = Math.round(totalScore / QUIZ_CATEGORIES.length);
 
+            // Build detailed answer log
+            const detailedAnswers = quizState.allQuestions.map(({ cat, catIdx, q, qIdx }) => ({
+                categorie: cat.name,
+                question: q,
+                reponse: quizState.answers[catIdx + '-' + qIdx] || null
+            }));
+
             // Save result
             const results = loadData('quiz_results', []);
             results.push({
                 leadData: quizState.leadData,
+                answers: detailedAnswers,
                 dimensionScores,
                 finalScore,
                 date: new Date().toISOString()
@@ -1001,74 +1197,144 @@
             const level = QUIZ_LEVELS.find(l => score >= l.min && score <= l.max);
 
             // Hide quiz sections and show results
-            const quizProgress = document.getElementById('quizProgress');
+            const quizProgress = document.getElementById('quizArena');
             if (quizProgress) quizProgress.style.display = 'none';
-            document.querySelectorAll('.quiz-section').forEach(s => s.classList.remove('active'));
             const resultsPage = document.getElementById('resultsPage');
             if (resultsPage) resultsPage.style.display = 'block';
+            // Full-width layout for results dashboard
+            const quizPageEl = document.querySelector('.quiz-page');
+            if (quizPageEl) quizPageEl.style.maxWidth = '100%';
+            const containerPageEl = document.querySelector('.container-page');
+            if (containerPageEl) { containerPageEl.style.maxWidth = '100%'; containerPageEl.style.padding = '0'; }
+            const quitBtn = document.getElementById('qaQuitBtn');
+            if (quitBtn) quitBtn.style.display = 'none';
 
-            // Populate results
+            // Date
+            const rpDate = document.getElementById('rpDate');
+            if (rpDate) rpDate.textContent = new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+
+            // Hero — name / company
             const resultName = document.getElementById('resultName');
             if (resultName) resultName.textContent = `${quizState.leadData.prenom} ${quizState.leadData.nom}`;
+            const rpCompany = document.getElementById('rpCompany');
+            if (rpCompany) rpCompany.textContent = quizState.leadData.entreprise || '';
 
+            // Score arc SVG
             const scoreRing = document.getElementById('scoreRing');
             if (scoreRing) {
-                scoreRing.textContent = score;
-                scoreRing.style.background = level.color;
-                scoreRing.style.color = 'white';
+                const r = 88, cx = 100, cy = 100;
+                const circ = 2 * Math.PI * r;
+                const bg = circ * 0.75; // 270° arc
+                const offset = bg * (1 - score / 100);
+                const rot = 135; // start from bottom-left
+                scoreRing.innerHTML = `
+                    <svg viewBox="0 0 200 200" width="200" height="200">
+                        <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="14"
+                            stroke-dasharray="${bg} ${circ}" stroke-dashoffset="0"
+                            stroke-linecap="round" transform="rotate(${rot} ${cx} ${cy})"/>
+                        <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${level.color}" stroke-width="14"
+                            stroke-dasharray="${bg} ${circ}" stroke-dashoffset="${bg}"
+                            stroke-linecap="round" transform="rotate(${rot} ${cx} ${cy})"
+                            id="arcFill"
+                            style="transition: stroke-dashoffset 1.4s cubic-bezier(0.4,0,0.2,1); filter: drop-shadow(0 0 8px ${level.color}88);"/>
+                    </svg>`;
+                setTimeout(() => {
+                    const arc = document.getElementById('arcFill');
+                    if (arc) arc.style.strokeDashoffset = offset;
+                }, 120);
+            }
+
+            const rpScoreNum = document.getElementById('rpScoreNum');
+            if (rpScoreNum) {
+                // Animate counter
+                let current = 0;
+                const step = Math.ceil(score / 40);
+                const timer = setInterval(() => {
+                    current = Math.min(current + step, score);
+                    rpScoreNum.textContent = current;
+                    if (current >= score) clearInterval(timer);
+                }, 30);
             }
 
             const levelName = document.getElementById('levelName');
-            if (levelName) levelName.textContent = level.name;
+            if (levelName) {
+                levelName.innerHTML = `${level.emoji} ${level.name}`;
+                levelName.style.background = level.color + '22';
+                levelName.style.color = level.color;
+                levelName.style.border = `1px solid ${level.color}44`;
+            }
             const levelTitle = document.getElementById('levelTitle');
             if (levelTitle) levelTitle.textContent = level.title;
             const levelDesc = document.getElementById('levelDesc');
-            if (levelDesc) levelDesc.textContent = level.desc;
+            if (levelDesc) levelDesc.innerHTML = buildPersonalAnalysis(dimensionScores, score, quizState.leadData);
 
-            // Dimension scores
+            // KPI cards (with recommendation inline)
             const scoresContainer = document.getElementById('dimensionScores');
             if (scoresContainer) {
+                const tierLabel = s => s < 40 ? 'Faible' : s < 70 ? 'En développement' : 'Avancé';
                 scoresContainer.innerHTML = QUIZ_CATEGORIES.map(cat => {
-                    const score = dimensionScores[cat.id];
+                    const s = dimensionScores[cat.id] || 0;
+                    const r2 = 17, circ2 = 2 * Math.PI * r2;
+                    const offset2 = circ2 * (1 - s / 100);
+                    const tiers = RECOMMENDATIONS[cat.id] || [];
+                    const reco = tiers.find(t => s <= t.maxScore);
+                    const formation = reco && reco.trainer ? FORMATIONS.find(f => f.id === reco.trainer) : null;
                     return `
-                        <div class="dimension-item" style="border-left-color: ${cat.color};">
-                            <div class="dimension-item-name" style="color: ${cat.color};">${cat.name}</div>
-                            <div class="dimension-item-bar">
-                                <div class="dimension-item-fill" style="width: 0%; background: ${cat.color};" data-target="${score}"></div>
+                        <div class="kpi-card" style="--kpi-color: ${cat.color};">
+                            <div class="kpi-card-top">
+                                <div class="kpi-card-icon">${cat.icon}</div>
+                                <svg class="kpi-score-circle" viewBox="0 0 44 44">
+                                    <circle cx="22" cy="22" r="${r2}" fill="none" stroke="#f1f5f9" stroke-width="4"/>
+                                    <circle cx="22" cy="22" r="${r2}" fill="none" stroke="${cat.color}" stroke-width="4"
+                                        stroke-dasharray="${circ2}" stroke-dashoffset="${circ2}"
+                                        stroke-linecap="round" transform="rotate(-90 22 22)"
+                                        class="kpi-arc" data-target="${offset2}"
+                                        style="transition: stroke-dashoffset 1s ${0.1}s cubic-bezier(0.4,0,0.2,1);"/>
+                                </svg>
                             </div>
-                            <div class="dimension-item-score">${score}/100</div>
-                        </div>
-                    `;
+                            <div class="kpi-card-name">${cat.name}</div>
+                            <div class="kpi-card-score">${s}<span>/100</span></div>
+                            <div class="kpi-card-bar">
+                                <div class="kpi-card-bar-fill" data-target="${s}" style="background:${cat.color};"></div>
+                            </div>
+                            <div class="kpi-card-tier">${tierLabel(s)}</div>
+                            ${reco ? `<div class="kpi-card-divider"></div>
+                            <div class="kpi-reco-tag" style="background:${cat.color};">${reco.tag}</div>
+                            <div class="kpi-reco-text">${reco.text}</div>` : ''}
+                            ${formation ? `<div class="kpi-formation">
+                                <div class="kpi-formation-label">Formation recommandée</div>
+                                <div class="kpi-formation-inner">
+                                    <img class="kpi-formation-photo" src="${formation.photo}" alt="${formation.trainer}" onerror="this.style.display='none'">
+                                    <div class="kpi-formation-info">
+                                        <div class="kpi-formation-trainer">${formation.trainer}</div>
+                                        <div class="kpi-formation-title">${formation.title}</div>
+                                    </div>
+                                    <a href="formations.html" class="kpi-formation-cta" style="background:${cat.color};">Voir →</a>
+                                </div>
+                            </div>` : ''}
+                        </div>`;
                 }).join('');
 
-                // Animate dimension scores
                 setTimeout(() => {
-                    document.querySelectorAll('.dimension-item-fill').forEach(el => {
-                        const target = parseInt(el.dataset.target);
-                        el.style.width = target + '%';
+                    document.querySelectorAll('.kpi-card-bar-fill').forEach(el => {
+                        el.style.width = el.dataset.target + '%';
                     });
-                }, 100);
+                    document.querySelectorAll('.kpi-arc').forEach(el => {
+                        el.style.strokeDashoffset = el.dataset.target;
+                    });
+                }, 150);
             }
 
             // Draw radar chart
             drawRadarChart(dimensionScores);
 
-            // Recommendations
-            const recosContainer = document.getElementById('recosGrid');
-            if (recosContainer) {
-                recosContainer.innerHTML = '';
-                QUIZ_CATEGORIES.forEach(cat => {
-                    const recos = RECOMMENDATIONS[cat.id] || [];
-                    recos.forEach(reco => {
-                        recosContainer.innerHTML += `
-                            <div class="reco-card">
-                                <div class="reco-tag" style="background: ${cat.color};">${reco.tag}</div>
-                                <div class="reco-text">${reco.text}</div>
-                            </div>
-                        `;
-                    });
-                });
-            }
+            // Personal analysis already in hero (levelDesc)
+            const analysisEl = document.getElementById('personalAnalysis');
+            if (analysisEl) analysisEl.style.display = 'none';
+
+            // Recos now embedded in KPI cards — hide separate section
+            const recosSect = document.querySelector('.recos-section');
+            if (recosSect) recosSect.style.display = 'none';
 
             // Draw diploma
             drawDiploma(score, level);
@@ -1078,96 +1344,88 @@
             const canvas = document.getElementById('radarChart');
             if (!canvas) return;
             const ctx = canvas.getContext('2d');
-            const centerX = canvas.width / 2;
-            const centerY = canvas.height / 2;
-            const maxRadius = 120;
+            const W = canvas.width, H = canvas.height;
+            const cx = W / 2, cy = H / 2;
+            const maxR = 100;
+            const n = QUIZ_CATEGORIES.length;
 
-            // Clear canvas
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.clearRect(0, 0, W, H);
 
-            const angles = [];
-            for (let i = 0; i < QUIZ_CATEGORIES.length; i++) {
-                angles.push((i / QUIZ_CATEGORIES.length) * Math.PI * 2 - Math.PI / 2);
-            }
+            const angles = Array.from({ length: n }, (_, i) =>
+                (i / n) * Math.PI * 2 - Math.PI / 2
+            );
 
-            // Draw concentric circles
-            ctx.strokeStyle = '#e0e0e0';
-            ctx.lineWidth = 1;
-            for (let i = 20; i <= 100; i += 20) {
-                const radius = (i / 100) * maxRadius;
+            const px = (r, i) => cx + r * Math.cos(angles[i]);
+            const py = (r, i) => cy + r * Math.sin(angles[i]);
+
+            // Concentric grid polygons
+            [20, 40, 60, 80, 100].forEach(pct => {
+                const r = (pct / 100) * maxR;
                 ctx.beginPath();
-                for (let j = 0; j < QUIZ_CATEGORIES.length; j++) {
-                    const x = centerX + radius * Math.cos(angles[j]);
-                    const y = centerY + radius * Math.sin(angles[j]);
-                    if (j === 0) ctx.moveTo(x, y);
-                    else ctx.lineTo(x, y);
+                for (let i = 0; i < n; i++) {
+                    i === 0 ? ctx.moveTo(px(r, i), py(r, i)) : ctx.lineTo(px(r, i), py(r, i));
                 }
                 ctx.closePath();
+                ctx.strokeStyle = pct === 100 ? '#c8d5e8' : '#e8eef6';
+                ctx.lineWidth = pct === 100 ? 1.5 : 1;
                 ctx.stroke();
-
-                // Labels
-                if (i === 100) {
-                    ctx.fillStyle = '#999';
-                    ctx.font = 'bold 11px sans-serif';
-                    ctx.textAlign = 'center';
-                    ctx.textBaseline = 'middle';
+                // pct label on right axis
+                if (pct < 100) {
+                    ctx.fillStyle = '#b0bec5';
+                    ctx.font = '9px sans-serif';
+                    ctx.textAlign = 'left';
+                    ctx.fillText(pct, cx + r + 3, cy + 3);
                 }
-            }
+            });
 
-            // Draw axes
-            ctx.strokeStyle = '#999';
-            ctx.lineWidth = 1;
-            for (let i = 0; i < QUIZ_CATEGORIES.length; i++) {
-                const x = centerX + maxRadius * Math.cos(angles[i]);
-                const y = centerY + maxRadius * Math.sin(angles[i]);
+            // Axes
+            for (let i = 0; i < n; i++) {
                 ctx.beginPath();
-                ctx.moveTo(centerX, centerY);
-                ctx.lineTo(x, y);
+                ctx.moveTo(cx, cy);
+                ctx.lineTo(px(maxR, i), py(maxR, i));
+                ctx.strokeStyle = '#dde5f0';
+                ctx.lineWidth = 1;
                 ctx.stroke();
             }
 
-            // Draw data polygon
-            ctx.fillStyle = 'rgba(64, 162, 212, 0.2)';
-            ctx.strokeStyle = '#2292cb';
-            ctx.lineWidth = 2;
+            // Data polygon fill (gradient-like multi-color)
             ctx.beginPath();
-            for (let i = 0; i < QUIZ_CATEGORIES.length; i++) {
-                const cat = QUIZ_CATEGORIES[i];
-                const score = dimensionScores[cat.id] / 100;
-                const radius = score * maxRadius;
-                const x = centerX + radius * Math.cos(angles[i]);
-                const y = centerY + radius * Math.sin(angles[i]);
-                if (i === 0) ctx.moveTo(x, y);
-                else ctx.lineTo(x, y);
+            for (let i = 0; i < n; i++) {
+                const r = (dimensionScores[QUIZ_CATEGORIES[i].id] / 100) * maxR;
+                i === 0 ? ctx.moveTo(px(r, i), py(r, i)) : ctx.lineTo(px(r, i), py(r, i));
             }
             ctx.closePath();
+            ctx.fillStyle = 'rgba(34,146,203,0.12)';
             ctx.fill();
+            ctx.strokeStyle = '#2292cb';
+            ctx.lineWidth = 2;
             ctx.stroke();
 
-            // Draw points
-            ctx.fillStyle = '#2292cb';
-            for (let i = 0; i < QUIZ_CATEGORIES.length; i++) {
+            // Colored dots per dimension
+            for (let i = 0; i < n; i++) {
                 const cat = QUIZ_CATEGORIES[i];
-                const score = dimensionScores[cat.id] / 100;
-                const radius = score * maxRadius;
-                const x = centerX + radius * Math.cos(angles[i]);
-                const y = centerY + radius * Math.sin(angles[i]);
+                const r = (dimensionScores[cat.id] / 100) * maxR;
                 ctx.beginPath();
-                ctx.arc(x, y, 4, 0, Math.PI * 2);
+                ctx.arc(px(r, i), py(r, i), 5, 0, Math.PI * 2);
+                ctx.fillStyle = cat.color;
                 ctx.fill();
+                ctx.strokeStyle = 'white';
+                ctx.lineWidth = 2;
+                ctx.stroke();
             }
 
-            // Labels
-            ctx.fillStyle = '#333';
-            ctx.font = 'bold 12px sans-serif';
+            // Icon + score labels
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
-            for (let i = 0; i < QUIZ_CATEGORIES.length; i++) {
+            for (let i = 0; i < n; i++) {
                 const cat = QUIZ_CATEGORIES[i];
-                const labelRadius = maxRadius + 30;
-                const x = centerX + labelRadius * Math.cos(angles[i]);
-                const y = centerY + labelRadius * Math.sin(angles[i]);
-                ctx.fillText(cat.icon, x, y);
+                const labelR = maxR + 22;
+                const lx = px(labelR, i), ly = py(labelR, i);
+                ctx.font = '18px sans-serif';
+                ctx.fillText(cat.icon, lx, ly - 7);
+                ctx.fillStyle = cat.color;
+                ctx.font = 'bold 11px sans-serif';
+                ctx.fillText(dimensionScores[cat.id], lx, ly + 9);
             }
         }
 
@@ -1308,12 +1566,18 @@
 
         function resetQuiz() {
             const leadForm = document.getElementById('quizLeadForm');
-            const quizProgress = document.getElementById('quizProgress');
+            const quizProgress = document.getElementById('quizArena');
             const resultsPage = document.getElementById('resultsPage');
 
             if (leadForm) leadForm.style.display = 'block';
             if (quizProgress) quizProgress.style.display = 'none';
             if (resultsPage) resultsPage.style.display = 'none';
+            const quitBtn = document.getElementById('qaQuitBtn');
+            if (quitBtn) quitBtn.style.display = 'none';
+            const qpEl = document.querySelector('.quiz-page');
+            if (qpEl) qpEl.style.maxWidth = '';
+            const cpEl = document.querySelector('.container-page');
+            if (cpEl) { cpEl.style.maxWidth = ''; cpEl.style.padding = ''; }
 
             // Reset form
             const leadNom = document.getElementById('leadNom');
@@ -1331,6 +1595,13 @@
             if (leadSecteur) leadSecteur.value = '';
             if (leadTaille) leadTaille.value = '';
             if (leadFonction) leadFonction.value = '';
+
+            // Reset CIA steps to step 0
+            document.querySelectorAll('.cia-step').forEach(s => s.classList.remove('active'));
+            const step0 = document.getElementById('ciaStep0');
+            if (step0) step0.classList.add('active');
+            document.getElementById('leadSecteur').value = '';
+            document.getElementById('leadTaille').value = '';
 
             quizState = {
                 leadData: {},
@@ -1448,6 +1719,20 @@
             if (currentPage === 'formations') {
                 renderFormations();
             } else if (currentPage === 'quiz') {
+                // DEV SHORTCUT: quiz.html?test — skip directly to results
+                if (new URLSearchParams(location.search).has('test')) {
+                    quizState.leadData = { prenom: 'Test', nom: 'Dev', email: 'test@dev.fr', entreprise: 'ID Labs' };
+                    quizState.allQuestions = [];
+                    QUIZ_CATEGORIES.forEach((cat, catIdx) => {
+                        cat.questions.forEach((q, qIdx) => {
+                            quizState.allQuestions.push({ cat, catIdx, q, qIdx });
+                            quizState.answers[`${catIdx}-${qIdx}`] = 3;
+                        });
+                    });
+                    document.getElementById('quizLeadForm').style.display = 'none';
+                    calculateResults();
+                    return;
+                }
                 initQuiz();
             } else if (currentPage === 'admin') {
                 updateAdminPanel();
