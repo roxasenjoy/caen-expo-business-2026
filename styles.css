@@ -2020,10 +2020,26 @@
         /* ---- Answer buttons ---- */
         .qa-answers {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             gap: 8px;
             border-top: 1px solid #f1f5f9;
             padding: 20px 28px 28px;
+        }
+
+        .answer-scale-hint {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #8fa0b8;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding: 0 2px;
+        }
+
+        .answer-btns-row {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
         }
 
         .answer-btn {

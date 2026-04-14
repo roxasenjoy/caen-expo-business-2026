@@ -1108,13 +1108,21 @@
                 const container = document.getElementById('answerButtons');
 
                 if (container) {
-                    container.innerHTML = [1,2,3,4,5,6].map(v => `
-                        <button class="answer-btn${current === v ? ' selected' : ''}"
-                            data-value="${v}" data-cat="${catIdx}" data-q="${qIdx}"
-                            style="--cat-color: ${cat.color}">
-                            ${v}
-                        </button>
-                    `).join('');
+                    container.innerHTML = `
+                        <div class="answer-scale-hint">
+                            <span>1 · le moins bon</span>
+                            <span>6 · le mieux</span>
+                        </div>
+                        <div class="answer-btns-row">
+                            ${[1,2,3,4,5,6].map(v => `
+                                <button class="answer-btn${current === v ? ' selected' : ''}"
+                                    data-value="${v}" data-cat="${catIdx}" data-q="${qIdx}"
+                                    style="--cat-color: ${cat.color}">
+                                    ${v}
+                                </button>
+                            `).join('')}
+                        </div>
+                    `;
 
                     container.querySelectorAll('.answer-btn').forEach(btn => {
                         btn.addEventListener('click', function() {
