@@ -16,8 +16,8 @@
                 ],
                 bio: '',
                 sessions: [
-                    { id: 'jb_s1', label: '4 juin 2026', date: '2026-06-04', lieu: 'Douvres', salle: 'NK Vision' },
-                    { id: 'jb_s2', label: '6 octobre 2026', date: '2026-10-06', lieu: 'Douvres', salle: 'NK Vision' }
+                    { id: 'jb_s1', label: '2 juin 2026', date: '2026-06-02', lieu: 'Caen', salle: '' },
+                    { id: 'jb_s2', label: '6 octobre 2026', date: '2026-10-06', lieu: 'Caen', salle: '' }
                 ],
                 tarifSalon: '350 €',
                 tarifNormal: '400 €',
@@ -41,8 +41,8 @@
                 ],
                 bio: '',
                 sessions: [
-                    { id: 'timothee_s1', label: '9 juin 2026', date: '2026-06-09', lieu: 'Douvres', salle: 'NK Vision' },
-                    { id: 'timothee_s2', label: '10 septembre 2026', date: '2026-09-10', lieu: 'Douvres', salle: 'NK Vision' }
+                    { id: 'timothee_s1', label: '9 juin 2026', date: '2026-06-09', lieu: 'Caen', salle: '' },
+                    { id: 'timothee_s2', label: '10 septembre 2026', date: '2026-09-10', lieu: 'Caen', salle: '' }
                 ],
                 tarifSalon: '350 €',
                 tarifNormal: '400 €',
@@ -66,8 +66,8 @@
                 ],
                 bio: '',
                 sessions: [
-                    { id: 'stephanie_s1', label: '25-26 juin 2026', date: '2026-06-25', lieu: 'Douvres', salle: 'NK Vision' },
-                    { id: 'stephanie_s2', label: '21-22 septembre 2026', date: '2026-09-21', lieu: 'Douvres', salle: 'NK Vision' }
+                    { id: 'stephanie_s1', label: '25-26 juin 2026', date: '2026-06-25', lieu: 'Caen', salle: '' },
+                    { id: 'stephanie_s2', label: '21-22 septembre 2026', date: '2026-09-21', lieu: 'Caen', salle: '' }
                 ],
                 tarifSalon: '375 €',
                 tarifNormal: '455 €',
@@ -90,8 +90,8 @@
                 ],
                 bio: 'Je suis Cécile, copywriter. Ce que je débloque chez un dirigeant, c\'est la capacité à rendre son savoir-faire désirable et évident : son message cesse d\'être purement informatif pour devenir magnétique.',
                 sessions: [
-                    { id: 'cecile_s1', label: '11 juin 2026', date: '2026-06-11', lieu: 'Caen', salle: 'Bananerie' },
-                    { id: 'cecile_s2', label: '17 septembre 2026', date: '2026-09-17', lieu: 'Caen', salle: 'Bananerie' }
+                    { id: 'cecile_s1', label: '11 juin 2026', date: '2026-06-11', lieu: 'Caen', salle: '' },
+                    { id: 'cecile_s2', label: '17 septembre 2026', date: '2026-09-17', lieu: 'Caen', salle: '' }
                 ],
                 tarifSalon: '350 €',
                 tarifNormal: '400 €',
@@ -114,8 +114,8 @@
                 ],
                 bio: 'Je suis Cédric, développeur et formateur. Ce que je débloque chez un dirigeant, c\'est la maîtrise de ses outils numériques : je construis des solutions solides, intégrant développement, automatisation, IA et No-Code.',
                 sessions: [
-                    { id: 'cedric_s1', label: '16 juin 2026', date: '2026-06-16', lieu: 'Colombelles', salle: 'Forum Digital' },
-                    { id: 'cedric_s2', label: '1er octobre 2026', date: '2026-10-01', lieu: 'Colombelles', salle: 'Forum Digital' }
+                    { id: 'cedric_s1', label: '16 juin 2026', date: '2026-06-16', lieu: 'Caen', salle: '' },
+                    { id: 'cedric_s2', label: '1er octobre 2026', date: '2026-10-01', lieu: 'Caen', salle: '' }
                 ],
                 tarifSalon: '380 €',
                 tarifNormal: '450 €',
