@@ -490,4 +490,16 @@ INSERT INTO videos (trainer_id, title, tag, description, filename, mime_type, di
     ('cedric',   'L''onboarding salarié en un clic',
      'n8n + OpenAI',
      'Pipeline n8n + OpenAI pour automatiser intégralement l''onboarding d''un nouveau salarié.',
-     'cedric-n8n-openai-onboarding-salarie.mp4', 'video/mp4', 4);
+     'cedric-n8n-openai-onboarding-salarie.mp4', 'video/mp4', 4),
+    ('stephanie', 'Faire une création graphique "à la manière de"',
+     'IA Image',
+     'Générer une image dans le style d''un artiste ou d''une esthétique précise grâce à l''IA.',
+     'stephanie-ia-image-creation-graphique-maniere-de.mp4', 'video/mp4', 1),
+    ('stephanie', 'Créer une page web respectant votre charte graphique',
+     'IA Image',
+     'Concevoir une page web sur-mesure en cohérence avec votre identité visuelle grâce à l''IA.',
+     'stephanie-ia-image-page-web-charte-graphique.mp4', 'video/mp4', 2),
+    ('stephanie', 'Décliner un visuel en 5 formats sans graphiste',
+     'IA Image',
+     'Adapter automatiquement un visuel professionnel en plusieurs formats avec l''IA.',
+     'stephanie-ia-image-decliner-visuel-5-formats.mp4', 'video/mp4', 3);
