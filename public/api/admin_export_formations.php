@@ -1,6 +1,4 @@
 <?php
-declare(strict_types=1);
-
 require_once __DIR__ . '/../includes/auth.php';
 require_once __DIR__ . '/../includes/db.php';
 
@@ -25,27 +23,26 @@ header('Content-Disposition: attachment; filename="formations_inscriptions.csv"'
 header('Cache-Control: no-store');
 
 $out = fopen('php://output', 'w');
-// BOM UTF-8 pour qu'Excel ouvre proprement les accents
 fwrite($out, "\xEF\xBB\xBF");
 
-fputcsv($out, [
+fputcsv($out, array(
     'Formation', 'Formateur', 'Session',
     'Nom', 'Prénom', 'Email', 'Téléphone', 'Entreprise',
     'Date inscription'
-], ';');
+), ';');
 
 foreach ($rows as $r) {
-    fputcsv($out, [
+    fputcsv($out, array(
         $r['formation'],
         $r['formateur'],
         $r['session_label'],
         $r['nom'],
         $r['prenom'],
         $r['email'],
-        $r['telephone'] ?? '',
+        isset($r['telephone']) ? $r['telephone'] : '',
         $r['entreprise'],
         $r['created_at'],
-    ], ';');
+    ), ';');
 }
 
 fclose($out);

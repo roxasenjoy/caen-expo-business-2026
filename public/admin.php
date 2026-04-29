@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+
 
 require_once __DIR__ . '/includes/auth.php';
 require_once __DIR__ . '/includes/db.php';
@@ -12,14 +12,14 @@ $pdo = idlabs_db();
 $pwMessage = null;
 $pwError   = null;
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') === 'change_password')) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && ((isset($_POST['action']) ? $_POST['action'] : '') === 'change_password')) {
     if (empty($_POST['csrf_token']) || empty($_SESSION['csrf_token'])
         || !hash_equals((string) $_SESSION['csrf_token'], (string) $_POST['csrf_token'])) {
         $pwError = 'Session expirée, veuillez réessayer.';
     } else {
-        $current = (string) ($_POST['current'] ?? '');
-        $new1    = (string) ($_POST['new1']    ?? '');
-        $new2    = (string) ($_POST['new2']    ?? '');
+        $current = (string) (isset($_POST['current']) ? $_POST['current'] : '');
+        $new1    = (string) (isset($_POST['new1'])    ? $_POST['new1']    : '');
+        $new2    = (string) (isset($_POST['new2'])    ? $_POST['new2']    : '');
 
         if (!idlabs_check_admin_code($current)) {
             usleep(700000);
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') === 'chan
             try {
                 idlabs_admin_hash_set($new1);
                 $pwMessage = 'Code admin mis à jour avec succès. Le hash bcrypt est désormais en BDD.';
-            } catch (Throwable $e) {
+            } catch (Exception $e) {
                 $pwError = 'Erreur lors de la mise à jour du code.';
             }
         }
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (($_POST['action'] ?? '') === 'chan
 }
 
 if (empty($_SESSION['csrf_token'])) {
-    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    $_SESSION['csrf_token'] = bin2hex(openssl_random_pseudo_bytes(32));
 }
 
 // ---- Statistiques globales --------------------------------------------
@@ -99,10 +99,10 @@ require __DIR__ . '/includes/header.php';
                             <div class="formation-stat">
                                 <div class="formation-stat-name" style="font-weight: 700;">
                                     <?= htmlspecialchars($f['trainer'], ENT_QUOTES, 'UTF-8') ?>
-                                    &mdash; <?= htmlspecialchars($f['tag'] ?? '', ENT_QUOTES, 'UTF-8') ?>
+                                    &mdash; <?= htmlspecialchars(isset($f['tag']) ? $f['tag'] : '', ENT_QUOTES, 'UTF-8') ?>
                                 </div>
                             </div>
-                            <?php foreach ($sessionsByFormation[$f['id']] ?? [] as $s): ?>
+                            <?php foreach (isset($sessionsByFormation[$f['id']]) ? $sessionsByFormation[$f['id']] : array() as $s): ?>
                                 <div class="formation-stat" style="margin-left: 16px;">
                                     <div class="formation-stat-name" style="font-size: 13px; color: #666;">
                                         <?= htmlspecialchars($s['label'], ENT_QUOTES, 'UTF-8') ?>

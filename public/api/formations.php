@@ -1,6 +1,4 @@
 <?php
-declare(strict_types=1);
-
 require_once __DIR__ . '/../includes/db.php';
 require_once __DIR__ . '/../includes/helpers.php';
 
@@ -22,9 +20,9 @@ $sessionsRaw = $pdo->query(
      ORDER BY s.formation_id, s.display_order ASC'
 )->fetchAll();
 
-$sessionsByFormation = [];
+$sessionsByFormation = array();
 foreach ($sessionsRaw as $row) {
-    $sessionsByFormation[$row['formation_id']][] = [
+    $sessionsByFormation[$row['formation_id']][] = array(
         'id'        => $row['id'],
         'label'     => $row['label'],
         'date'      => $row['session_date'],
@@ -32,13 +30,13 @@ foreach ($sessionsRaw as $row) {
         'salle'     => $row['salle'],
         'capacity'  => (int) $row['capacity'],
         'inscrits'  => (int) $row['inscrits'],
-    ];
+    );
 }
 
-$out = [];
+$out = array();
 foreach ($formations as $f) {
-    $objectifs = $f['objectifs'] ? json_decode($f['objectifs'], true) : [];
-    $out[] = [
+    $objectifs = $f['objectifs'] ? json_decode($f['objectifs'], true) : array();
+    $out[] = array(
         'id'           => $f['id'],
         'trainer'      => $f['trainer'],
         'initials'     => $f['initials'],
@@ -47,14 +45,14 @@ foreach ($formations as $f) {
         'tag'          => $f['tag'],
         'title'        => $f['title'],
         'resume'       => $f['resume'],
-        'objectifs'    => is_array($objectifs) ? $objectifs : [],
-        'bio'          => $f['bio'] ?? '',
-        'tarifSalon'   => $f['tarif_salon'] ?? '',
-        'tarifNormal'  => $f['tarif_normal'] ?? '',
-        'tarif'        => $f['tarif'] ?? '',
-        'lien'         => $f['lien'] ?? '',
-        'sessions'     => $sessionsByFormation[$f['id']] ?? [],
-    ];
+        'objectifs'    => is_array($objectifs) ? $objectifs : array(),
+        'bio'          => isset($f['bio'])         ? $f['bio']         : '',
+        'tarifSalon'   => isset($f['tarif_salon']) ? $f['tarif_salon'] : '',
+        'tarifNormal'  => isset($f['tarif_normal'])? $f['tarif_normal']: '',
+        'tarif'        => isset($f['tarif'])       ? $f['tarif']       : '',
+        'lien'         => isset($f['lien'])        ? $f['lien']        : '',
+        'sessions'     => isset($sessionsByFormation[$f['id']]) ? $sessionsByFormation[$f['id']] : array(),
+    );
 }
 
-idlabs_send_json(200, ['formations' => $out]);
+idlabs_send_json(200, array('formations' => $out));

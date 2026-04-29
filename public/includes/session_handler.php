@@ -2,27 +2,16 @@
 /**
  * Custom session handler — stocke les sessions PHP en BDD MySQL
  * avec chiffrement AES-256-CBC et signature HMAC-SHA256.
- *
- * Format binaire du payload stocké en colonne LONGBLOB :
- *
- *     [ IV  : 16 octets ] [ HMAC : 32 octets ] [ ciphertext : N octets ]
- *
- * - La clé de chiffrement et celle d'authentification dérivent toutes deux
- *   de SESSION_SECRET (.env) via SHA-256, mais avec deux salts différents
- *   pour éviter d'utiliser la même clé partout.
- * - HMAC vérifié en temps constant avant déchiffrement (encrypt-then-MAC).
  */
 
-declare(strict_types=1);
-
-final class IdlabsDbSession implements SessionHandlerInterface
+class IdlabsDbSession implements SessionHandlerInterface
 {
-    private PDO $pdo;
-    private string $encKey;
-    private string $macKey;
-    private int $lifetime;
+    private $pdo;
+    private $encKey;
+    private $macKey;
+    private $lifetime;
 
-    public function __construct(PDO $pdo, string $secret, int $lifetime = 7200)
+    public function __construct($pdo, $secret, $lifetime = 7200)
     {
         $this->pdo      = $pdo;
         $this->encKey   = hash('sha256', 'idlabs-session-enc|' . $secret, true);
@@ -30,23 +19,22 @@ final class IdlabsDbSession implements SessionHandlerInterface
         $this->lifetime = max(60, $lifetime);
     }
 
-    public function open(string $savePath, string $sessionName): bool
+    public function open($savePath, $sessionName)
     {
         return true;
     }
 
-    public function close(): bool
+    public function close()
     {
         return true;
     }
 
-    #[\ReturnTypeWillChange]
-    public function read(string $id): string|false
+    public function read($id)
     {
         $stmt = $this->pdo->prepare(
             'SELECT payload FROM sessions WHERE id = :id AND expires_at > NOW() LIMIT 1'
         );
-        $stmt->execute([':id' => $id]);
+        $stmt->execute(array(':id' => $id));
         $blob = $stmt->fetchColumn();
 
         if ($blob === false || $blob === null || $blob === '') {
@@ -56,7 +44,7 @@ final class IdlabsDbSession implements SessionHandlerInterface
         return $plain !== null ? $plain : '';
     }
 
-    public function write(string $id, string $data): bool
+    public function write($id, $data)
     {
         $payload = $this->encrypt($data);
         $expires = date('Y-m-d H:i:s', time() + $this->lifetime);
@@ -71,23 +59,22 @@ final class IdlabsDbSession implements SessionHandlerInterface
         return $stmt->execute();
     }
 
-    public function destroy(string $id): bool
+    public function destroy($id)
     {
         $stmt = $this->pdo->prepare('DELETE FROM sessions WHERE id = :id');
-        return $stmt->execute([':id' => $id]);
+        return $stmt->execute(array(':id' => $id));
     }
 
-    #[\ReturnTypeWillChange]
-    public function gc(int $maxlifetime): int|false
+    public function gc($maxlifetime)
     {
         $stmt = $this->pdo->prepare('DELETE FROM sessions WHERE expires_at < NOW()');
         $stmt->execute();
         return $stmt->rowCount();
     }
 
-    private function encrypt(string $plain): string
+    private function encrypt($plain)
     {
-        $iv     = random_bytes(16);
+        $iv     = openssl_random_pseudo_bytes(16);
         $cipher = openssl_encrypt($plain, 'AES-256-CBC', $this->encKey, OPENSSL_RAW_DATA, $iv);
         if ($cipher === false) {
             throw new RuntimeException('Échec du chiffrement de la session');
@@ -96,7 +83,7 @@ final class IdlabsDbSession implements SessionHandlerInterface
         return $iv . $hmac . $cipher;
     }
 
-    private function decrypt(string $blob): ?string
+    private function decrypt($blob)
     {
         if (strlen($blob) < 16 + 32 + 1) {
             return null;

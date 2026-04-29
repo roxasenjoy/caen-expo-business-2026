@@ -1,6 +1,4 @@
 <?php
-declare(strict_types=1);
-
 require_once __DIR__ . '/../includes/db.php';
 require_once __DIR__ . '/../includes/helpers.php';
 
@@ -8,24 +6,24 @@ idlabs_require_method('POST');
 
 $body = idlabs_read_json_body();
 
-$sessionId = idlabs_str($body['sessionId'] ?? null, 60);
-$nom        = idlabs_str($body['nom'] ?? null, 120);
-$prenom     = idlabs_str($body['prenom'] ?? null, 120);
-$email      = idlabs_email($body['email'] ?? null);
-$telephone  = idlabs_str($body['telephone'] ?? null, 50);
-$entreprise = idlabs_str($body['entreprise'] ?? null, 255);
+$sessionId  = idlabs_str(isset($body['sessionId'])  ? $body['sessionId']  : null, 60);
+$nom        = idlabs_str(isset($body['nom'])         ? $body['nom']        : null, 120);
+$prenom     = idlabs_str(isset($body['prenom'])      ? $body['prenom']     : null, 120);
+$email      = idlabs_email(isset($body['email'])     ? $body['email']      : null);
+$telephone  = idlabs_str(isset($body['telephone'])   ? $body['telephone']  : null, 50);
+$entreprise = idlabs_str(isset($body['entreprise'])  ? $body['entreprise'] : null, 255);
 
 if ($sessionId === '' || $nom === '' || $prenom === '' || $entreprise === '' || $email === null) {
-    idlabs_send_json(400, ['error' => 'Champs obligatoires manquants ou invalides']);
+    idlabs_send_json(400, array('error' => 'Champs obligatoires manquants ou invalides'));
 }
 
 $pdo = idlabs_db();
 
 $stmt = $pdo->prepare('SELECT formation_id FROM formation_sessions WHERE id = :id LIMIT 1');
-$stmt->execute([':id' => $sessionId]);
+$stmt->execute(array(':id' => $sessionId));
 $session = $stmt->fetch();
 if (!$session) {
-    idlabs_send_json(404, ['error' => 'Session introuvable']);
+    idlabs_send_json(404, array('error' => 'Session introuvable'));
 }
 
 $ins = $pdo->prepare(
@@ -34,7 +32,7 @@ $ins = $pdo->prepare(
      VALUES
         (:session_id, :formation_id, :nom, :prenom, :email, :telephone, :entreprise)'
 );
-$ins->execute([
+$ins->execute(array(
     ':session_id'   => $sessionId,
     ':formation_id' => $session['formation_id'],
     ':nom'          => $nom,
@@ -42,14 +40,14 @@ $ins->execute([
     ':email'        => $email,
     ':telephone'    => $telephone !== '' ? $telephone : null,
     ':entreprise'   => $entreprise,
-]);
+));
 
 $count = (int) $pdo->query(
     'SELECT COUNT(*) FROM formation_registrations WHERE session_id = ' . $pdo->quote($sessionId)
 )->fetchColumn();
 
-idlabs_send_json(200, [
+idlabs_send_json(200, array(
     'success'   => true,
     'sessionId' => $sessionId,
     'inscrits'  => $count,
-]);
+));

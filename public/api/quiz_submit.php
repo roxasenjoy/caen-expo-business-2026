@@ -1,6 +1,4 @@
 <?php
-declare(strict_types=1);
-
 require_once __DIR__ . '/../includes/db.php';
 require_once __DIR__ . '/../includes/helpers.php';
 
@@ -8,22 +6,22 @@ idlabs_require_method('POST');
 
 $body = idlabs_read_json_body();
 
-$lead = is_array($body['leadData'] ?? null) ? $body['leadData'] : [];
+$lead = (isset($body['leadData']) && is_array($body['leadData'])) ? $body['leadData'] : array();
 
-$prenom     = idlabs_str($lead['prenom'] ?? null, 120);
-$nom        = idlabs_str($lead['nom'] ?? null, 120);
-$email      = idlabs_email($lead['email'] ?? null);
-$entreprise = idlabs_str($lead['entreprise'] ?? null, 255);
-$secteur    = idlabs_str($lead['secteur'] ?? null, 80);
-$taille     = idlabs_str($lead['taille'] ?? null, 40);
-$fonction   = idlabs_str($lead['fonction'] ?? null, 255);
+$prenom     = idlabs_str(isset($lead['prenom'])     ? $lead['prenom']     : null, 120);
+$nom        = idlabs_str(isset($lead['nom'])         ? $lead['nom']        : null, 120);
+$email      = idlabs_email(isset($lead['email'])     ? $lead['email']      : null);
+$entreprise = idlabs_str(isset($lead['entreprise'])  ? $lead['entreprise'] : null, 255);
+$secteur    = idlabs_str(isset($lead['secteur'])     ? $lead['secteur']    : null, 80);
+$taille     = idlabs_str(isset($lead['taille'])      ? $lead['taille']     : null, 40);
+$fonction   = idlabs_str(isset($lead['fonction'])    ? $lead['fonction']   : null, 255);
 
-$finalScore       = isset($body['finalScore']) ? (int) $body['finalScore'] : -1;
-$dimensionScores  = is_array($body['dimensionScores'] ?? null) ? $body['dimensionScores'] : [];
-$answers          = is_array($body['answers'] ?? null) ? $body['answers'] : [];
+$finalScore      = isset($body['finalScore'])      ? (int) $body['finalScore']      : -1;
+$dimensionScores = (isset($body['dimensionScores']) && is_array($body['dimensionScores'])) ? $body['dimensionScores'] : array();
+$answers         = (isset($body['answers'])         && is_array($body['answers']))         ? $body['answers']         : array();
 
 if ($prenom === '' || $nom === '' || $email === null || $finalScore < 0 || $finalScore > 100) {
-    idlabs_send_json(400, ['error' => 'Données quiz invalides']);
+    idlabs_send_json(400, array('error' => 'Données quiz invalides'));
 }
 
 $pdo = idlabs_db();
@@ -36,17 +34,17 @@ try {
          VALUES
             (:prenom, :nom, :email, :entreprise, :secteur, :taille, :fonction, :final_score, :dim)'
     );
-    $ins->execute([
+    $ins->execute(array(
         ':prenom'      => $prenom,
         ':nom'         => $nom,
         ':email'       => $email,
         ':entreprise'  => $entreprise !== '' ? $entreprise : null,
-        ':secteur'     => $secteur !== ''    ? $secteur    : null,
-        ':taille'      => $taille !== ''     ? $taille     : null,
-        ':fonction'    => $fonction !== ''   ? $fonction   : null,
+        ':secteur'     => $secteur    !== '' ? $secteur    : null,
+        ':taille'      => $taille     !== '' ? $taille     : null,
+        ':fonction'    => $fonction   !== '' ? $fonction   : null,
         ':final_score' => $finalScore,
         ':dim'         => json_encode($dimensionScores, JSON_UNESCAPED_UNICODE),
-    ]);
+    ));
 
     $resultId = (int) $pdo->lastInsertId();
 
@@ -59,19 +57,19 @@ try {
             if (!is_array($a)) {
                 continue;
             }
-            $insA->execute([
+            $insA->execute(array(
                 ':rid' => $resultId,
-                ':cat' => idlabs_str($a['categorie'] ?? '', 120),
-                ':q'   => idlabs_str($a['question'] ?? '', 1000),
-                ':r'   => isset($a['reponse']) && $a['reponse'] !== null ? (int) $a['reponse'] : null,
-            ]);
+                ':cat' => idlabs_str(isset($a['categorie']) ? $a['categorie'] : '', 120),
+                ':q'   => idlabs_str(isset($a['question'])  ? $a['question']  : '', 1000),
+                ':r'   => (isset($a['reponse']) && $a['reponse'] !== null) ? (int) $a['reponse'] : null,
+            ));
         }
     }
 
     $pdo->commit();
-} catch (Throwable $e) {
+} catch (Exception $e) {
     $pdo->rollBack();
-    idlabs_send_json(500, ['error' => 'Erreur lors de l\'enregistrement du quiz']);
+    idlabs_send_json(500, array('error' => 'Erreur lors de l\'enregistrement du quiz'));
 }
 
-idlabs_send_json(200, ['success' => true, 'id' => $resultId]);
+idlabs_send_json(200, array('success' => true, 'id' => $resultId));

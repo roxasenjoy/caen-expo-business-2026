@@ -3,9 +3,7 @@
  * Petits helpers partagés (réponse JSON, lecture body JSON, validations).
  */
 
-declare(strict_types=1);
-
-function idlabs_send_json(int $status, array $data): void
+function idlabs_send_json($status, $data)
 {
     http_response_code($status);
     header('Content-Type: application/json; charset=utf-8');
@@ -14,27 +12,28 @@ function idlabs_send_json(int $status, array $data): void
     exit;
 }
 
-function idlabs_read_json_body(): array
+function idlabs_read_json_body()
 {
-    $raw = file_get_contents('php://input') ?: '';
-    if ($raw === '') {
-        return [];
+    $raw = file_get_contents('php://input');
+    if ($raw === false || $raw === '') {
+        return array();
     }
     $decoded = json_decode($raw, true);
     if (!is_array($decoded)) {
-        idlabs_send_json(400, ['error' => 'JSON invalide']);
+        idlabs_send_json(400, array('error' => 'JSON invalide'));
     }
     return $decoded;
 }
 
-function idlabs_require_method(string $method): void
+function idlabs_require_method($method)
 {
-    if (($_SERVER['REQUEST_METHOD'] ?? '') !== $method) {
-        idlabs_send_json(405, ['error' => 'Méthode non autorisée']);
+    $actual = isset($_SERVER['REQUEST_METHOD']) ? $_SERVER['REQUEST_METHOD'] : '';
+    if ($actual !== $method) {
+        idlabs_send_json(405, array('error' => 'Méthode non autorisée'));
     }
 }
 
-function idlabs_str(?string $value, int $maxLen = 255): string
+function idlabs_str($value, $maxLen = 255)
 {
     $v = trim((string) $value);
     if (mb_strlen($v) > $maxLen) {
@@ -43,11 +42,12 @@ function idlabs_str(?string $value, int $maxLen = 255): string
     return $v;
 }
 
-function idlabs_email(?string $value): ?string
+function idlabs_email($value)
 {
     $v = trim((string) $value);
     if ($v === '') {
         return null;
     }
-    return filter_var($v, FILTER_VALIDATE_EMAIL) ?: null;
+    $result = filter_var($v, FILTER_VALIDATE_EMAIL);
+    return $result !== false ? $result : null;
 }

@@ -1,14 +1,8 @@
 <?php
-/**
- * Configuration centrale — lit les variables d'environnement injectées
- * par docker-compose et expose les constantes de l'application.
- */
-
-declare(strict_types=1);
+require_once __DIR__ . '/password_compat.php';
 
 if (!function_exists('idlabs_env')) {
-    function idlabs_env(string $key, ?string $default = null): ?string
-    {
+    function idlabs_env($key, $default = null) {
         $val = getenv($key);
         if ($val === false || $val === '') {
             return $default;

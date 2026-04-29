@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+
 
 require_once __DIR__ . '/includes/auth.php';
 
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 if (empty($_SESSION['csrf_token'])) {
-    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    $_SESSION['csrf_token'] = bin2hex(openssl_random_pseudo_bytes(32));
 }
 
 $pageTitle = 'Accès administrateur - ID Labs';

@@ -8,13 +8,11 @@
  *   avec AES-256-CBC + HMAC via IdlabsDbSession.
  */
 
-declare(strict_types=1);
-
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/db.php';
 require_once __DIR__ . '/session_handler.php';
 
-function idlabs_session_start(): void
+function idlabs_session_start()
 {
     if (session_status() === PHP_SESSION_ACTIVE) {
         return;
@@ -24,41 +22,29 @@ function idlabs_session_start(): void
     session_set_save_handler($handler, true);
 
     session_name('idlabs_sid');
-    session_set_cookie_params([
-        'lifetime' => 7200,
-        'path'     => '/',
-        'secure'   => false,   // mettre à true derrière HTTPS
-        'httponly' => true,
-        'samesite' => 'Lax',
-    ]);
+    session_set_cookie_params(7200, '/', '', false, true);
     session_start();
 }
 
-function idlabs_is_admin(): bool
+function idlabs_is_admin()
 {
     idlabs_session_start();
     return !empty($_SESSION['idlabs_admin']) && $_SESSION['idlabs_admin'] === true;
 }
 
-/**
- * Récupère le hash bcrypt courant en BDD, ou null s'il n'a jamais été défini.
- */
-function idlabs_admin_hash_get(): ?string
+function idlabs_admin_hash_get()
 {
     $stmt = idlabs_db()->query('SELECT password_hash FROM admin_credentials WHERE id = 1 LIMIT 1');
     $row = $stmt->fetchColumn();
     return ($row === false || $row === null) ? null : (string) $row;
 }
 
-/**
- * Met à jour le code admin en BDD (hashé avec bcrypt).
- */
-function idlabs_admin_hash_set(string $newPlain): void
+function idlabs_admin_hash_set($newPlain)
 {
     if ($newPlain === '') {
         throw new InvalidArgumentException('Code admin vide');
     }
-    $hash = password_hash($newPlain, PASSWORD_BCRYPT, ['cost' => 12]);
+    $hash = password_hash($newPlain, PASSWORD_BCRYPT, array('cost' => 12));
     if ($hash === false) {
         throw new RuntimeException('Impossible de hasher le code admin');
     }
@@ -66,10 +52,10 @@ function idlabs_admin_hash_set(string $newPlain): void
         'INSERT INTO admin_credentials (id, password_hash) VALUES (1, :h)
          ON DUPLICATE KEY UPDATE password_hash = VALUES(password_hash)'
     );
-    $stmt->execute([':h' => $hash]);
+    $stmt->execute(array(':h' => $hash));
 }
 
-function idlabs_check_admin_code(string $candidate): bool
+function idlabs_check_admin_code($candidate)
 {
     if ($candidate === '') {
         return false;
@@ -81,14 +67,14 @@ function idlabs_check_admin_code(string $candidate): bool
         return false;
     }
 
-    if (password_needs_rehash($hash, PASSWORD_BCRYPT, ['cost' => 12])) {
-        try { idlabs_admin_hash_set($candidate); } catch (Throwable $e) { /* ignore */ }
+    if (password_needs_rehash($hash, PASSWORD_BCRYPT, array('cost' => 12))) {
+        try { idlabs_admin_hash_set($candidate); } catch (Exception $e) { /* ignore */ }
     }
 
     return true;
 }
 
-function idlabs_login_admin(): void
+function idlabs_login_admin()
 {
     idlabs_session_start();
     session_regenerate_id(true);
@@ -96,17 +82,17 @@ function idlabs_login_admin(): void
     $_SESSION['idlabs_admin_since'] = time();
 }
 
-function idlabs_logout_admin(): void
+function idlabs_logout_admin()
 {
     idlabs_session_start();
-    $_SESSION = [];
+    $_SESSION = array();
     if (ini_get('session.use_cookies')) {
         $params = session_get_cookie_params();
         setcookie(
             session_name(), '',
             time() - 42000,
             $params['path'],
-            $params['domain'] ?? '',
+            isset($params['domain']) ? $params['domain'] : '',
             $params['secure'],
             $params['httponly']
         );
@@ -114,11 +100,7 @@ function idlabs_logout_admin(): void
     session_destroy();
 }
 
-/**
- * À placer en haut de toute page protégée.
- * Redirige vers login.php si l'utilisateur n'est pas authentifié.
- */
-function idlabs_require_admin(string $loginPath = 'login.php'): void
+function idlabs_require_admin($loginPath = 'login.php')
 {
     if (!idlabs_is_admin()) {
         header('Location: ' . $loginPath);
@@ -126,15 +108,12 @@ function idlabs_require_admin(string $loginPath = 'login.php'): void
     }
 }
 
-/**
- * Pour les endpoints API : renvoie 401 JSON si non authentifié.
- */
-function idlabs_require_admin_api(): void
+function idlabs_require_admin_api()
 {
     if (!idlabs_is_admin()) {
         http_response_code(401);
         header('Content-Type: application/json; charset=utf-8');
-        echo json_encode(['error' => 'Authentification requise']);
+        echo json_encode(array('error' => 'Authentification requise'));
         exit;
     }
 }
