@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+
 
 $pageTitle = 'Diagnostic Maturité IA - ID Labs';
 $pageDesc  = 'ID Labs - Quiz IA';

@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+
 
 $pageTitle = 'Vidéos de démonstration - ID Labs';
 $pageDesc  = 'ID Labs - Vidéos de nos formateurs IA';

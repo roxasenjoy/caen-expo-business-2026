@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+
 
 $pageTitle = 'ID Labs - Salon Caen 2026';
 $pageDesc  = 'ID Labs - Salon Caen 2026 - Formations et Quiz IA';

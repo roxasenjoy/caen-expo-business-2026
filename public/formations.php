@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+
 
 $pageTitle = 'Nos Formations IA - ID Labs';
 $pageDesc  = 'ID Labs - Formations IA';

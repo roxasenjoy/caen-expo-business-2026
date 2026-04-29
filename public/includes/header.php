@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+
 
 if (!isset($pageTitle))   { $pageTitle = 'ID Labs'; }
 if (!isset($pageDesc))    { $pageDesc = 'ID Labs - Salon Caen 2026'; }
