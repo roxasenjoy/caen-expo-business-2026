@@ -1,3 +1,10 @@
 RewriteEngine On
 RewriteCond %{REQUEST_URI} !^/public/
 RewriteRule ^(.*)$ /public/$1 [L,QSA]
+
+SetEnv DB_HOST      idlabsfrlvia.mysql.db
+SetEnv DB_NAME      idlabsfrlvia
+SetEnv DB_USER      idlabsfrlvia
+SetEnv DB_PASSWORD  D25eF3fe2Ef5fe5
+SetEnv SESSION_SECRET OWyIXnCeRAVWTWSMTuwjx/aYY6w2AmwIBL3nFJ4+jaA=
+SetEnv APP_ENV      production
