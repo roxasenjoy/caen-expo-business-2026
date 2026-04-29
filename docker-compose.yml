@@ -1,0 +1,72 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: idlabs_web
+    restart: unless-stopped
+    ports:
+      - "9000:80"
+    volumes:
+      - ./public:/var/www/html
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_NAME: idlabs
+      DB_USER: idlabs_app
+      DB_PASSWORD: ${MYSQL_PASSWORD}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      SESSION_SECRET: ${SESSION_SECRET}
+      APP_ENV: ${APP_ENV:-production}
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - idlabs_net
+
+  db:
+    image: mysql:8.0
+    container_name: idlabs_db
+    restart: unless-stopped
+    ports:
+      - "9090:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: idlabs
+      MYSQL_USER: idlabs_app
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - idlabs_db_data:/var/lib/mysql
+      - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    networks:
+      - idlabs_net
+
+  phpmyadmin:
+    image: phpmyadmin:5
+    container_name: idlabs_pma
+    restart: unless-stopped
+    ports:
+      - "9091:80"
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      UPLOAD_LIMIT: 64M
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - idlabs_net
+
+volumes:
+  idlabs_db_data:
+    driver: local
+
+networks:
+  idlabs_net:
+    driver: bridge
