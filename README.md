@@ -1,6 +1,6 @@
 # ID Labs — Salon Caen Business Expo 2026
 
-Site web ID Labs (formations IA + quiz de maturité), version PHP / Apache / MySQL packagée avec Docker Compose.
+Site web ID Labs (**formations IA + quiz de maturité**), version PHP / Apache / MySQL packagée avec Docker Compose.
 
 ## Architecture
 
