@@ -48,7 +48,7 @@ require __DIR__ . '/includes/header.php';
                 </p>
 
                 <div class="feature-cards">
-                    <div class="feature-card formations" onclick="window.location.href = 'formations.php'">
+                    <div class="feature-card formations" onclick="window.location.href = 'formations.php'" style="display:none">
                         <div class="feature-card-visual">
                             <span class="feature-card-badge">Tarif Salon</span>
                             <div class="feature-card-icon">

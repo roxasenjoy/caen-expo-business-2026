@@ -56,7 +56,7 @@ $isAdmin = idlabs_is_admin();
                     <button class="nav-close" id="navClose" aria-label="Fermer le menu">&times;</button>
                     <div class="nav-section">
                         <a href="index.php"      class="nav-btn <?= $activeNav === 'home'       ? 'active' : '' ?>">Accueil</a>
-                        <a href="formations.php" class="nav-btn <?= $activeNav === 'formations' ? 'active' : '' ?>">Formations</a>
+                        <a href="formations.php" class="nav-btn <?= $activeNav === 'formations' ? 'active' : '' ?>" style="display:none">Formations</a>
                         <a href="videos.php"     class="nav-btn <?= $activeNav === 'videos'     ? 'active' : '' ?>">Vidéos</a>
                         <a href="quiz.php"       class="nav-btn <?= $activeNav === 'quiz'       ? 'active' : '' ?>">Quiz IA</a>
                         <?php if ($isAdmin): ?>
